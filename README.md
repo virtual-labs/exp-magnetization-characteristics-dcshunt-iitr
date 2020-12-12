@@ -1,24 +1,31 @@
-## Introduction
+## Introduction (Round 0)
 
 
-<b>Discipline | <b>Fill your discipline name here
+<br>
+
+<b>Discipline | <b> Electrical Engineering
 :--|:--|
-<b> Lab | <b> Fill your lab name here
-<b> Experiment|     <b> Fill your experiment name and number here
+<b> Lab | <b> Electrical Machines (Simulation)
+<b> Experiment|     <b> 7. 	To study Magnetisation Characteristics of DC shunt generator.
 
-### About the Experiment 
+<h5> About the Experiment : </h5> <br>
 
-Fill a brief description of this experiment here
+To study the magnetisation characteristics of DC shunt generator. Draw the graph between the armature voltage and field current.
 
-<b>Name of Developer | <b> Fill the name of experiment owner here 
+<b>Name of Developer | <b> Prof. RS Anand
 :--|:--|
-<b> Institute | <b>  
-<b> Email id|     <b>  
-<b> Department |  
+<b> Institute | <b> IIT Roorkee
+<b> Email id|     <b> anandfee@gmail.com
+<b> Department | Electrical Engineering
 
-### Contributors List
+#### Contributors List
 
 SrNo | Name | Faculty or Student | Department| Institute | Email id
 :--|:--|:--|:--|:--|:--|
-1 | . | . | . | . | .
-2 | . | . | . | . | .
+1 | Prof. RS Anand | Faculty | Electrical Engineering | IIT Roorkee, Roorkee | anandfee@gmail.com
+2 | Jasbir Singh | Research Fellow | Electrical Engineering | IIT Roorkee, Roorkee | jasbirjassy6@gmail.com 
+3 | Rajeev Kumar | Research Fellow | Electrical Engineering | IIT Roorkee, Roorkee | rajeevkumar.rke@gmail.com
+4 | Priyanshi Agarwal | Research Fellow | Electrical Engineering | IIT Roorkee, Roorkee | priyanshi.a07@gmail.com
+
+
+<br>
