@@ -1,1 +1,1 @@
-## Experiment name
+## 	To study Magnetisation Characteristics of DC shunt generator.
