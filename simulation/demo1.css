@@ -1,0 +1,146 @@
+ body {
+    background-color: grey;
+
+}
+
+.demo {
+    /* for IE10+ touch devices */
+    touch-action:none;
+}
+/** JSPLUMB ARTEFACTS **/
+.jtk-overlay {
+    z-index: 51;
+}
+
+.jtk-endpoint {
+    z-index: 50;
+    cursor: move;
+}
+
+.jtk-connector {
+    z-index: 1;
+}
+
+/** ELEMENTS **/
+.littledot
+{
+    cursor: pointer;
+    width: 15px;
+    height: 15px;
+    background-image: url(littledot.png);
+    z-index: 5;
+    position: absolute;
+    border-radius: 31px;
+}
+
+
+
+.littledot-hover-hover {
+    border: 2px solid red;
+}
+
+.dropHover {
+    border: 1px solid blue;
+}
+
+/** ELEMENT POSITIONS **/
+#ld1 {
+    top: 254px;
+    left: 34px;
+}
+
+#ld2 {
+    top: 254px;
+    left: 80px;
+}
+
+#ld3 {
+    top: 175px;
+    left: 183px;
+}
+
+#ld4 {
+    top: 175px;
+    left: 245px;
+}
+
+#ld5 {
+    top: 175px;
+    left: 308px;
+}
+
+#ld6 {
+    top: 256px;
+    left: 452px;
+}
+
+#ld7 {
+    top: 256px;
+    left: 576px;
+}
+
+#ld8 {
+    top: 256px;
+    left: 694px;
+}
+
+#ld9 {
+    top: 256px;
+    left: 811px;
+}
+
+#ld10 {
+    top: 473px;
+    left: 65px;
+}
+
+#ld11 {
+    top: 438px;
+    left: 198px;
+}
+
+#ld12 {
+    top: 405px;
+    left:349px;
+}
+
+#ld13 {
+    top: 405px;
+    left: 408px;
+  }
+
+#ld14 {
+    top:  380px;
+    left: 579px;
+}
+
+#ld15 {
+    top:  380px;
+    left: 628px;
+}
+
+#ld16 {
+    top: 565px;
+    left: 333px;
+}
+
+#ld17 {
+    top: 565px;
+    left: 391px;
+}
+
+#ld18 {
+    top: 589px;
+    left:579px;
+}
+
+#ld19 {
+    top: 589px;
+    left: 628px;
+}
+
+
+
+path, .jtk-endpoint {
+    cursor: pointer;
+}
