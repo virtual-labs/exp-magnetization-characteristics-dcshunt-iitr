@@ -1,5 +1,56 @@
-/* .rotate {
-  animation: rotation 8s infinite linear;
+* {
+  box-sizing: border-box;
+}
+ #wrapper {
+  width:100%;
+}
+
+div
+{
+  resize: both;
+  overflow: ;
+}
+#wrapper {
+  width:100%;
+}
+.column60 {
+  float: left;
+  width: 60%;
+  padding: 10px;
+  height: 300px;
+  border-style: solid;
+  
+}
+
+.column40 {
+  float: left;
+  width: 40%;
+  padding: 10px;
+  height: 300px;
+  border-style: solid;
+  
+}
+.column20 {
+  float: left;
+  width: 20%;
+  padding: 10px;
+  height: 300px;
+  border-style: solid; 
+}
+.column30 {
+  float: left;
+  width: 30%;
+  padding: 10px;
+  height: 300px;
+  border-style: solid; 
+}
+
+
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
 }
 
 @keyframes rotation {
@@ -7,13 +58,78 @@
     transform: rotate(0deg);
   }
   to {
-    transform: rotate(359deg);
+    transform: rotate(370deg);
   }
 }
 .outer
-	{
-		position: relative;
-		top: 0;
-		left: 0;
-	}
-	 */
+  {
+    position: relative;
+    top: 0;
+    left: 0;
+  }
+  
+  
+  .meter {
+        display: block;
+        width: 283px;
+        height: 155px;
+        margin: 0px auto
+
+      }
+
+      .meter-shape {
+        -webkit-transform: skewX(-2deg) skewY(1deg);
+                transform: skewX(-2deg) skewY(1deg);
+        stroke-width: 18;
+        stroke-dashoffset: 253;
+        stroke: blue;
+        fill: none;
+      }
+
+      .meter-clock {
+        -webkit-transform: rotate(-54deg);
+                transform: rotate(-54deg);
+        -webkit-transform-origin: 137px 146px;
+                transform-origin: 137px 146px;
+        fill: red;
+      }
+
+      .meter-clock2 {
+        -webkit-transform: rotate(-54deg);
+                transform: rotate(-54deg);
+        -webkit-transform-origin: 137 px 146px;
+                transform-origin: 137px 146px;
+        fill: red;
+      }
+
+
+      #range {
+        margin-bottom: 50px;
+        width: 130px;
+      }
+
+      .meter1 {
+        margin-top:130px;
+      }
+
+      .meter2 {
+       margin-top:130px;
+      }
+      .meter-clock2{
+      width: 20px;
+       margin-top:-500px;
+      }
+
+      .other {
+        text-align: center;
+         margin-top: 0px;
+      }
+
+    .container{
+    width: 20%;
+   
+   
+    
+   
+    
+  }
