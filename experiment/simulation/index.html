@@ -1,997 +1,760 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+ "http://www.w3.org/TR/html4/strict.dtd">
 <html>
-
 <head>
-  <title>Magnetisation Characteristics of DC Shunt Generator.</title>
-  <link rel="stylesheet" href="./style.css">
-  <link rel="stylesheet" href="demo1.css">
-  <meta charset="utf-8">
-  <meta name="generator" content="Google Web Designer 5.1.1.0611">
-  <meta name="template" content="Banner 3.0.0">
-  <meta name="environment" content="gwd-dv360">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="gwdpage_style.css" rel="stylesheet" data-version="12" data-exports-type="gwd-page">
-  <link href="gwdpagedeck_style.css" rel="stylesheet" data-version="12" data-exports-type="gwd-pagedeck">
-  <link href="gwdgooglead_style.css" rel="stylesheet" data-version="5" data-exports-type="gwd-google-ad">
-  <link href="gwdimage_style.css" rel="stylesheet" data-version="12" data-exports-type="gwd-image">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <style type="text/css" id="gwd-lightbox-style">
-    .gwd-lightbox {
-      overflow: hidden;
-    }
-  </style>
-  <style type="text/css" id="gwd-text-style">
-    p {
-      margin: 0px;
-    }
-    h1 {
-      margin: 0px;
-    }
-    h2 {
-      margin: 0px;
-    }
-    h3 {
-      margin: 0px;
-    }
-  </style>
-  <style type="text/css">
-    html, body {
-      width: 100%;
-      height: 100%;
-      margin: 0px;
-    }
-    .gwd-page-container {
-      position: relative;
-      width: 100%;
-      height: 100%;
-    }
-    .gwd-page-content {
-      background-color: transparent;
-      transform: perspective(1400px) matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
-      transform-style: preserve-3d;
-      position: absolute;
-    }
-    .gwd-page-wrapper {
-      background-color: rgb(255, 255, 255);
-      position: absolute;
-      transform: translateZ(0px);
-    }
-    .gwd-page-size {
-      width: 1024px;
-      height: 1280px;
-    }
-    .gwd-image-1hcz {
-      position: absolute;
-      width: 72px;
-      height: 168px;
-      left: 0px;
-      top: 0px;
-    }
-    .gwd-rect-14vy {
-      position: absolute;
-      box-sizing: border-box;
-      border-width: 1px;
-      border-style: solid;
-      border-color: rgb(0, 0, 0);
-      top: 29px;
-      left: 9px;
-      width: 1005px;
-      height: 617px;
-      transform-origin: 502.5px 308.5px 0px;
-      background-image: none;
-      background-color: rgb(123, 36, 28);
-    }
-    .gwd-rect-jayr {
-      position: absolute;
-      width: 391px;
-      box-sizing: border-box;
-      border-width: 1px;
-      border-style: solid;
-      border-color: rgb(0, 0, 0);
-      height: 300px;
-      transform-origin: 195.5px 150px 0px;
-      left: 9px;
-      top: 29px;
-      background-image: none;
-      background-color: rgb(250, 240, 230);
-    }
-    .gwd-rect-1mjl {
-      position: absolute;
-      width: 614px;
-      box-sizing: border-box;
-      border-width: 1px;
-      border-style: solid;
-      border-color: rgb(0, 0, 0);
-      height: 300px;
-      transform-origin: 307px 150px 0px;
-      left: 400px;
-      top: 30px;
-      background-image: none;
-      background-color: rgb(250, 240, 230);
-    }
-    .gwd-rect-xyql {
-      position: absolute;
-      width: 306px;
-      left: 708px;
-      top: 329px;
-      box-sizing: border-box;
-      border-width: 1px;
-      border-style: solid;
-      border-color: rgb(0, 0, 0);
-      height: 317px;
-      transform-origin: 153px 158.5px 0px;
-      background-image: none;
-      background-color: rgb(250, 240, 230);
-    }
-    .gwd-rect-1e6t {
-      position: absolute;
-      box-sizing: border-box;
-      border-width: 1px;
-      border-style: solid;
-      border-color: rgb(0, 0, 0);
-      background-image: none;
-      left: 9px;
-      top: 329px;
-      width: 699px;
-      height: 317px;
-      transform-origin: 349.5px 158.5px 0px;
-      background-color: rgb(250, 240, 230);
-    }
-    .gwd-image-186z {
-      position: absolute;
-      left: 22px;
-      top: 56px;
-      background-image: none;
-      height: 143px;
-      width: 88px;
-      transform-origin: 44.2px 71.6px 0px;
-      background-color: rgb(250, 240, 230);
-    }
-    .gwd-image-1p9a {
-      position: absolute;
-      height: 233px;
-      width: 216px;
-      transform-origin: 108.215px 116.5px 0px;
-      left: 414px;
-      top: 45px;
-      background-image: none;
-      background-color: rgb(250, 240, 230);
-    }
-    .gwd-image-1wdx {
-      position: absolute;
-      width: 213px;
-      left: 652px;
-      top: 46px;
-      height: 232px;
-      transform-origin: 102px 116px 0px;
-      background-image: none;
-      background-color: rgb(250, 240, 230);
-    }
-    .gwd-rect-18i5 {
-      position: absolute;
-      width: 108px;
-      height: 31px;
-      box-sizing: border-box;
-      border-width: 1px;
-      border-style: solid;
-      border-color: rgb(0, 0, 0);
-      left: 884px;
-      top: 97px;
-      background-image: none;
-      background-color: rgb(232, 218, 239);
-    }
-    .gwd-rect-l1m3 {
-      position: absolute;
-      box-sizing: border-box;
-      border-width: 1px;
-      border-style: solid;
-      border-color: rgb(0, 0, 0);
-      width: 159px;
-      height: 122px;
-      transform-origin: 79.5px 60.9916px 0px;
-      left: 275px;
-      top: 384px;
-      background-color: rgb(250, 240, 230);
-    }
-    .gwd-svg-qcst {
-      background-image: none;
-      left: 0px;
-      top: 329px;
-      width: 1014px;
-      height: 951px;
-      transform-origin: 507px 475.158px 0px;
-    }
-    .gwd-rect-h0kw {
-      position: absolute;
-      box-sizing: border-box;
-      border-width: 1px;
-      border-style: solid;
-      border-color: rgb(0, 0, 0);
-      left: 521px;
-      width: 172px;
-      height: 159px;
-      background-image: none;
-      background-color: rgb(0, 172, 193);
-      top: 413px;
-    }
-    .gwd-image-lahx {
-      position: absolute;
-      background-image: none;
-      left: 521px;
-      width: 172px;
-      top: 413px;
-      height: 160px;
-      transform-origin: 85.8125px 79.3093px 0px;
-      background-color: rgb(250, 240, 230);
-    }
-    .gwd-image-1w7l {
-      position: absolute;
-      top: 465px;
-      width: 65px;
-      height: 60px;
-      transform-origin: 32.5px 30px 0px;
-      left: 574px;
-      background-image: none;
-      background-color: rgb(250, 240, 230);
-    }
-    .gwd-image-yln1 {
-      position: absolute;
-      width: 195px;
-      height: 70px;
-      transform-origin: 97.5px 35px 0px;
-      left: 34px;
-      top: 429px;
-      background-image: none;
-      background-color: rgb(250, 240, 230);
-    }
-    .gwd-p-1gf5 {
-      position: absolute;
-      height: 26px;
-      width: 126px;
-      transform-origin: 63px 13px 0px;
-      left: 74px;
-      top: 538px;
-      background-image: none;
-      background-color: rgb(250, 240, 230);
-    }
-    .gwd-span-1qro {
-      font-weight: bold;
-      font-size: 16px;
-    }
-    .gwd-p-1evl {
-      position: absolute;
-      width: 78px;
-      height: 26px;
-      font-weight: bold;
-      background-image: none;
-      background-color: rgb(250, 240, 230);
-      left: 344px;
-      top: 587px;
-    }
-    .gwd-p-145u {
-      position: absolute;
-      width: 143px;
-      height: 23px;
-      font-weight: bold;
-      background-image: none;
-      background-color: rgb(250, 240, 230);
-      left: 566px;
-      top: 612px;
-    }
-    .gwd-span-6qeb {
-      position: absolute;
-      width: 169.5px;
-      height: 29px;
-      left: 478px;
-      top: 288px;
-      font-weight: bold;
-      background-image: none;
-      background-color: rgb(250, 240, 230);
-    }
-    .gwd-span-119q {
-      position: absolute;
-      width: 157px;
-      height: 30px;
-      transform-origin: 307px 187.5px 0px;
-      left: 721px;
-      top: 291px;
-      font-weight: bold;
-      background-image: none;
-      background-color: rgb(250, 240, 230);
-    }
-    .gwd-rect-1ue0 {
-      position: absolute;
-      width: 226px;
-      height: 109px;
-      left: 154px;
-      top: 57px;
-      box-sizing: border-box;
-      border-width: 1px;
-      border-style: solid;
-      border-color: rgb(0, 0, 0);
-      background-image: none;
-      background-color: rgb(250, 240, 230);
-    }
-    .gwd-input-1wnt {
-      position: absolute;
-      height: 26px;
-      width: 126px;
-      transform-origin: 62.7577px 13px 0px;
-      left: 64px;
-      top: 432px;
-      background-image: none;
-      background-color: rgb(255, 255, 255);
-    }
-    .gwd-image-e43k {
-      position: absolute;
-      width: 249px;
-      height: 223px;
-      transform-origin: 124.648px 110.863px 0px;
-      left: 398px;
-      top: 54px;
-      transform: rotate(-57.5deg);
-    }
-    .gwd-image-3dm8 {
-      left: 635px;
-      top: 54px;
-      background-image: none;
-      background-color: transparent;
-    }
-    .gwd-line-1duv {
-      left: 9px;
-      top: 29px;
-      width: 734px;
-      height: 617px;
-      transform-origin: 367px 308.455px 0px;
-    }
-    .gwd-line-uazz {
-      left: 0px;
-      top: 0px;
-      width: 1024px;
-      height: 646px;
-      transform-origin: 512px 322.989px 0px;
-    }
-    .gwd-line-18bi {
-      left: 0px;
-      top: 0px;
-      width: 1024px;
-      height: 646px;
-      transform-origin: 512px 322.986px 0px;
-    }
-    .gwd-line-155a {
-      width: 1024px;
-      height: 1280px;
-      transform-origin: 512px 639.943px 0px;
-      left: 0px;
-      top: 0px;
-    }
-    .gwd-line-knbb {
-      left: 0px;
-      top: 0px;
-      width: 1024px;
-      height: 646px;
-      transform-origin: 512px 323px 0px;
-    }
-    .gwd-image-ct7c {
-      background-image: none;
-      background-color: transparent;
-    }
-    .gwd-image-424i {
-      position: absolute;
-      background-image: none;
-      background-color: rgb(250, 240, 230);
-      top: 408px;
-      width: 206px;
-      height: 160px;
-      transform-origin: 103px 80px 0px;
-      left: 281px;
-    }
-    .gwd-rect-1whr {
-      position: absolute;
-      box-sizing: border-box;
-      border-width: 1px;
-      border-style: solid;
-      border-color: rgb(0, 0, 0);
-      width: 40px;
-      top: 488px;
-      height: 11px;
-      transform-origin: 20px 5.5px 0px;
-      background-image: none;
-      background-color: rgb(79, 76, 76);
-      left: 482px;
-    }
-    .gwd-line-xw8s {
-      position: absolute;
-      width: 7.944px;
-      height: 10.926px;
-      left: 481.588px;
-      top: 488.357px;
-      stroke-width: 1px;
-      stroke: rgb(0, 0, 0);
-    }
-    .gwd-line-165x {
-      position: absolute;
-      width: 6.853px;
-      height: 10.824px;
-      left: 489.099px;
-      top: 488.709px;
-      stroke-width: 1px;
-      stroke: rgb(0, 0, 0);
-    }
-    .gwd-line-18uz {
-      position: absolute;
-      width: 6.419px;
-      height: 9.782px;
-      left: 496.351px;
-      top: 488.329px;
-      stroke-width: 1px;
-      stroke: rgb(0, 0, 0);
-    }
-    .gwd-line-chfa {
-      position: absolute;
-      width: 6.48px;
-      height: 9.938px;
-      left: 502.339px;
-      top: 488.427px;
-      stroke-width: 1px;
-      stroke: rgb(0, 0, 0);
-    }
-    .gwd-line-el0o {
-      position: absolute;
-      width: 7.23px;
-      height: 10.046px;
-      left: 508.404px;
-      top: 488.598px;
-      stroke-width: 1px;
-      stroke: rgb(0, 0, 0);
-    }
-    .gwd-line-40xx {
-      position: absolute;
-      width: 5.56px;
-      height: 10.102px;
-      left: 515.183px;
-      top: 488.759px;
-      stroke-width: 1px;
-      stroke: rgb(0, 0, 0);
-    }
-    .gwd-line-1to6 {
-      position: absolute;
-      width: 10.2px;
-      height: 8px;
-      left: 362.9px;
-      top: 473.2px;
-      stroke-width: 1px;
-      stroke: rgb(0, 0, 0);
-    }
-    .gwd-image-5msa {
-      position: absolute;
-      width: 74px;
-      height: 66px;
-      transform-origin: 37.1667px 33.1667px 0px;
-      left: 167px;
-      top: 71px;
-    }
-    .gwd-image-20sa {
-      width: 56px;
-      height: 52px;
-      transform-origin: 27.9587px 25.9638px 0px;
-      left: 167px;
-      top: 84px;
-    }
-    .gwd-image-20lc {
-      left: 239px;
-      top: 85px;
-    }
-    .gwd-image-htou {
-      left: 310px;
-      top: 85px;
-    }
-    .gwd-line-cwla {
-      position: absolute;
-      stroke-width: 1px;
-      stroke: rgb(0, 0, 0);
-      width: 1014px;
-      height: 4px;
-      transform-origin: 507px 2.2px 0px;
-      left: 1px;
-      top: 658px;
-    }
-    .gwd-line-wnnl {
-      position: absolute;
-      stroke-width: 1px;
-      stroke: rgb(0, 0, 0);
-      top: 330px;
-      left: 720px;
-      width: 2px;
-      height: 330px;
-      transform-origin: 1.22222px 165.116px 0px;
-    }
-    .gwd-line-awnn {
-      position: absolute;
-      stroke-width: 1px;
-      stroke: rgb(0, 0, 0);
-      left: 249px;
-      top: 328px;
-      width: 2px;
-      height: 332px;
-      transform-origin: 1.19483px 166.002px 0px;
-    }
-    .gwd-span-stnj {
-      position: absolute;
-      width: 80px;
-      height: 23px;
-      left: 27px;
-      top: 218px;
-      font-family: "Times New Roman";
-      color: rgb(0, 0, 0);
-    }
-    .gwd-span-nitg {
-      position: absolute;
-      width: 113px;
-      height: 16px;
-      left: 188px;
-      top: 199px;
-      font-family: "Times New Roman";
-      color: rgb(0, 0, 0);
-    }
-  </style>
-  <script data-source="googbase_min.js" data-version="4" data-exports-type="googbase" src="googbase_min.js"></script>
-  <script data-source="gwd_webcomponents_min.js" data-version="6" data-exports-type="gwd_webcomponents" src="gwd_webcomponents_min.js"></script>
-  <script data-source="gwdpage_min.js" data-version="12" data-exports-type="gwd-page" src="gwdpage_min.js"></script>
-  <script data-source="gwdpagedeck_min.js" data-version="12" data-exports-type="gwd-pagedeck" src="gwdpagedeck_min.js"></script>
-  <script data-source="https://s0.2mdn.net/ads/studio/Enabler.js" data-exports-type="gwd-google-ad" src="https://s0.2mdn.net/ads/studio/Enabler.js"></script>
-  <script data-source="gwdgooglead_min.js" data-version="5" data-exports-type="gwd-google-ad" src="gwdgooglead_min.js"></script>
-  <script data-source="gwdimage_min.js" data-version="12" data-exports-type="gwd-image" src="gwdimage_min.js"></script>
+<title>Virtual Labs | Magnetisation Characteristics of DC Shunt Generator </title>
+<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="style.css">
+<link rel="icon" type="image/x-icon" href="vlab logo.jpg">
+<script src="script.js"></script>
+
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+        <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no"/>
+        <!--<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">-->
+      <!--  <link href="//fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet">
+-->
+      
+        <link rel="stylesheet" href="demo1.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+*{
+padding:0px;
+margin:0px;
+
+}
+.column70 {
+  float: left;
+  width: 70%;
+  padding: 10px;
+  height: 300px;
+  border-style: solid;
+  
+}
+.column501 {
+  float: left;
+  width: 30%;
+  padding: 10px;
+  height: 300px;
+  border-style: solid; 
+  
+}
+* {
+  box-sizing: border-box;
+}
+ #wrapper {
+  width:100%;
+}
+
+div
+{
+  resize: both;
+  /* overflow: ; */
+}
+#wrapper {
+  width:100%;
+}
+.column60 {
+  float: left;
+  width: 60%;
+  padding: 10px;
+  height: 300px;
+  border-style: solid;
+  
+}
+
+.column40 {
+  float: left;
+  width: 40%;
+  padding: 10px;
+  height: 300px;
+  border-style: solid;
+  border-left: none;
+  
+}
+.column401 {
+  float: left;
+  width: 30%;
+  padding: 10px;
+  height: 300px;
+  border-style: solid; 
+  
+}
+.column20 {
+  float: left;
+  width: 20%;
+  padding: 10px;
+  height: 300px;
+  border-style: solid; 
+}
+.column30 {
+  float: left;
+  width: 30%;
+  padding: 10px;
+  height: 300px;
+  border-style: solid; 
+}
+.column301 {
+  float: left;
+  width: 70%;
+  padding: 10px;
+  height: 300px;
+  border-style: solid; 
+  /* border-right: : none; */
+}
+
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.rotorOuter
+  {
+    position: relative;
+    top: 0;
+    left: 0;
+  }
+.rotorInner
+  {
+    position: absolute;
+    top: 60px;
+    left: 60px;
+  }
+.autoTrasformerouter
+  {
+    position: relative;
+    top: 0;
+    left: 0;
+  }
+.autoTransformerinner
+  {
+    position: absolute;
+    top: 12px;
+    left: 13px;
+
+  }
+#check-button {
+padding:10px 27px;
+}
+#reset {
+padding:10px 30px;
+}
+img.autoTrasformerouter
+{
+  width:75%; 
+}
+img.autoTransformerinner
+{
+  width:60%; 
+}
+
+  .voltMeter {
+  position:absolute;
+  margin-left: 70px;
+  }
+  #volt_reader {
+  position:absolute;
+  top:7.5em;
+  left:24.7em;
+  text-align:center;
+  }
+  .niddle{
+  position:absolute;
+  top:60px;
+  left:551.5px;
+  }
+  .amMeter {
+  position:absolute;
+  margin-left: 110px;
+  }
+  .voltMeter {
+  position:relative;
+  }
+  #amme_reader {
+  position:absolute;
+  top:7.5em;
+  left:41.9em;
+  text-align:center;
+  }
+  .niddle1{
+  position:absolute;
+  top:60px;
+  left:378.2px;
+  }
+  .machine{
+  border-style:solid;
+  }
+  .rotate1 {
+  padding:15px;
+  }
+  .rotate
+  {
+    position: absolute;
+    top: 12px;
+    left: 13px;
+    animation: rotations 0s infinite linear;
+
+  }
+  @keyframes rotations {
+  from {
+    transform: rotate(10deg);
+  }
+  to {
+    transform: rotate(30deg);
+  }
+}
+#currentPointerValue1 {
+position:absolute;
+top:5em;
+left:43em;
+}
+
+.slider1 {
+  -webkit-appearance: none;
+  width: 16.3%;
+  height: 3px;
+  border-radius: 5px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+  top:26em;
+  left:3em;
+  position:absolute;
+  opacity:2;
+}
+
+.slider1:hover {
+  opacity: 3;
+}
+
+.slider1::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 23px;
+  height: 24px;
+  border: 0;
+  background: url('Slider.png');
+  cursor: pointer;
+}
+
+.slider1::-moz-range-thumb {
+  width: 23px;
+  height: 24px;
+  border: 0;
+  background: url('Slider.png');
+  cursor: pointer;
+}
+
+
+
+
+.slider {
+  -webkit-appearance: none;
+  width: 16.3%;
+  height: 3px;
+  border-radius: 5px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+  top:29em;
+  left:3em;
+  position:absolute;
+  opacity:2;
+}
+
+.slider:hover {
+  opacity: 3;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 23px;
+  height: 24px;
+  border: 0;
+  background: url('Slider.png');
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 23px;
+  height: 24px;
+  border: 0;
+  background: url('Slider.png');
+  cursor: pointer;
+}
+
+ .dropbtn {
+    background-color: #27d447;
+    color: white;
+    padding: 10px 8px;
+    font-size: 16px;
+    border: 2px solid black;
+    cursor: pointer;
+}
+
+/*.dropbtn:hover, .dropbtn:focus {
+    background-color: #3e8e41;
+} */
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+	  vertical-align: left;
+}
+
+.dropdown-content {
+    visibility: hidden;
+    width: 375px;
+    background:white;
+    color: black;
+    text-align: left;
+    padding: 5px 0;
+    border-radius: 6px;
+    font-size: 15px;
+    position: absolute;
+    z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+    visibility: visible;
+    position: absolute;
+    margin-left: 122px;
+    margin-top: -47px;
+    padding-left: 5px;
+    z-index: 1;
+    
+}
+
+.dropdown:hover {background-color: rgb(27, 75, 27)}
+
+.show {display:block;}
+
+
+</style>
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script></head>
+
+
+
 </head>
+<body onload="disab()">
 
-<body data-demo-id="animation" onload="disabled();">
-  <gwd-google-ad id="gwd-ad" polite-load="">
-    <gwd-metric-configuration></gwd-metric-configuration>
-    <gwd-pagedeck class="gwd-page-container" id="pagedeck">
-      <gwd-page id="page1" class="gwd-page-wrapper gwd-page-size gwd-lightbox" data-gwd-width="1024px" data-gwd-height="1280px">
-        <div class="gwd-page-content gwd-page-size">
-          <svg data-gwd-shape="rectangle" class="gwd-rect-14vy"></svg>
-          <svg data-gwd-shape="rectangle" class="gwd-rect-jayr"></svg>
-          <svg data-gwd-shape="rectangle" class="gwd-rect-1mjl"></svg>
-          <svg data-gwd-shape="rectangle" class="gwd-rect-xyql"></svg>
-          <svg data-gwd-shape="rectangle" class="gwd-rect-1e6t"></svg>
-          <!-- ------------ -->
-          <!-- <gwd-image id="MCB-Off" onclick="changeImage();" source="assets/MCB-Off.png" scaling="stretch" class="gwd-image-186z"></gwd-image> -->
-          <!-- <gwd-image id="MCB-Off" onclick="changeImage();" source="assets/MCB-Off.png" scaling="stretch" class="gwd-image-18e7 gwd-gen-ehslgwdanimation"></gwd-image> -->
-          <input type="image" id="MCB-Off" class="gwd-image-186z gwd-gen-ehslgwdanimation disabled" src="assets/MCB-Off.png" onclick="changeImage();start()">
-          <!-- ------------ -->
-          <gwd-image id="V_Meter" source="assets/V Meter.png" scaling="stretch" class="gwd-image-1p9a"></gwd-image>
-          <gwd-image id="A_meter" source="assets/A meter.png" scaling="stretch" class="gwd-image-1wdx"></gwd-image>
-          <svg data-gwd-shape="rectangle" class="gwd-rect-18i5"></svg>
-          <svg data-gwd-shape="rectangle" class="gwd-rect-l1m3 gwd-svg-qcst"></svg>
-          <svg data-gwd-shape="rectangle" class="gwd-rect-h0kw"></svg>
-          <gwd-image id="rotor_part_1_1" source="assets/rotor part 1.png" scaling="stretch" class="gwd-image-lahx"></gwd-image>
-          <gwd-image id="rotor_part_2_1" source="assets/rotor part 2.png" scaling="stretch" class="rotate gwd-image-1w7l"></gwd-image>
-          <svg data-gwd-shape="rectangle" class="gwd-rect-18bv"></svg>
-          <svg data-gwd-shape="line" preserveAspectRatio="none" viewBox="0 0 1024 646" class="gwd-line-z8ad gwd-line-knbb">
-            <line x1="0.267" x2="1023.733" y1="0.423" y2="645.577"></line>
-          </svg>
-          <svg data-gwd-shape="line" preserveAspectRatio="none" viewBox="0 0 1024 646" class="gwd-line-dlja gwd-line-18bi">
-            <line x1="0.267" x2="1023.733" y1="645.577" y2="0.423"></line>
-          </svg>
-          <svg data-gwd-shape="line" preserveAspectRatio="none" viewBox="0 0 1024 646" class="gwd-line-ma1o gwd-line-uazz">
-            <line x1="0.267" x2="1023.733" y1="645.577" y2="0.423"></line>
-          </svg>
-          <svg data-gwd-shape="line" preserveAspectRatio="none" viewBox="0 0 1024 1280" class="gwd-line-ttny gwd-line-155a gwd-gen-1cw2gwdanimation">
-            <line x1="0.39" x2="1023.61" y1="1279.688" y2="0.312"></line>
-          </svg>
-          <svg data-gwd-shape="line" preserveAspectRatio="none" viewBox="0 0 734 617" class="gwd-line-mws6 gwd-line-1duv gwd-gen-zp5kgwdanimation">
-            <line x1="0.322" x2="733.678" y1="616.617" y2="0.383"></line>
-          </svg>
-          <gwd-image id="rheostat" source="assets/rheostat.png" scaling="stretch" class="gwd-image-yln1"></gwd-image>
-          <p class="gwd-p-1gf5"><span class="gwd-span-1qro">RHEOSTAT</span><br>
-
-          </p>
-          <p class="gwd-p-1evl">MOTOR</p>
-          <p class="gwd-p-145u">GENERATOR</p><span class="gwd-span-6qeb">VOLTMETER</span><span class="gwd-span-119q">AMMETER</span>
-          <svg data-gwd-shape="rectangle" class="gwd-rect-1ue0"></svg>
-          <input type="range" id="range_1" min="0" max="100" step="1" value="0" class="gwd-input-1wnt" disabled="disabled">
-          <gwd-image id="speedometer-needle-png-3" source="assets/speedometer-needle-png-3.png" scaling="stretch" class="gwd-image-e43k gwd-image-ct7c"></gwd-image>
-          <gwd-image id="speedometer-needle-png-3_1" source="assets/speedometer-needle-png-3.png" scaling="stretch" class="gwd-image-e43k gwd-image-3dm8"></gwd-image>
-          <gwd-image id="DC_motor_03" source="assets/DC motor 03.png" scaling="stretch" class="gwd-image-424i"></gwd-image>
-          <svg data-gwd-shape="rectangle" class="gwd-rect-1whr"></svg>
-          <svg data-gwd-shape="line" preserveAspectRatio="none" viewBox="0 0 7.944 10.926" class="gwd-line-xw8s">
-            <line x1="0.412" x2="7.532" y1="10.643" y2="0.283"></line>
-          </svg>
-          <svg data-gwd-shape="line" preserveAspectRatio="none" viewBox="0 0 6.853 10.824" class="gwd-line-165x">
-            <line x1="0.432" x2="6.421" y1="10.573" y2="0.251"></line>
-          </svg>
-          <svg data-gwd-shape="line" preserveAspectRatio="none" viewBox="0 0 6.419 9.782" class="gwd-line-18uz">
-            <line x1="0.429" x2="5.99" y1="9.525" y2="0.257"></line>
-          </svg>
-          <svg data-gwd-shape="line" preserveAspectRatio="none" viewBox="0 0 6.48 9.938" class="gwd-line-chfa">
-            <line x1="0.429" x2="6.051" y1="9.682" y2="0.256"></line>
-          </svg>
-          <svg data-gwd-shape="line" preserveAspectRatio="none" viewBox="0 0 7.23 10.046" class="gwd-line-el0o">
-            <line x1="0.414" x2="6.816" y1="9.766" y2="0.28"></line>
-          </svg>
-          <svg data-gwd-shape="line" preserveAspectRatio="none" viewBox="0 0 5.56 10.102" class="gwd-line-40xx active-element-outline">
-            <line x1="0.45" x2="5.11" y1="9.885" y2="0.217"></line>
-          </svg>
-          <svg data-gwd-shape="line" preserveAspectRatio="none" viewBox="0 0 10.2 8" class="gwd-line-1to6">
-            <line x1="0.3" x2="9.9" y1="0.4" y2="7.6"></line>
-          </svg>
-          <!-- <input type="image" id="push1_2"  src="assets/push2.png" >
-          <input type="image" id="push1_1"  src="assets/push2.png">
-          <gwd-image id="push1" source="assets/push1.png" scaling="stretch" class="gwd-image-5msa gwd-image-20sa"></gwd-image>
-          <gwd-image id="push1_2" source="assets/push1.png" scaling="stretch" class="gwd-image-5msa gwd-image-20sa gwd-image-htou"></gwd-image>
-          <gwd-image id="push1_1" source="assets/push1.png" scaling="stretch" class="gwd-image-5msa gwd-image-20sa gwd-image-20lc"></gwd-image> -->
-          <svg data-gwd-shape="line" preserveAspectRatio="none" viewBox="0 0 1014 4" class="gwd-line-cwla">
-            <line x1="0.001" x2="1013.999" y1="0.5" y2="3.5"></line>
-          </svg>
-          <svg data-gwd-shape="line" preserveAspectRatio="none" viewBox="0 0 2 330" class="gwd-line-wnnl">
-            <line x1="0.5" x2="1.5" y1="0.002" y2="329.998"></line>
-          </svg>
-          <svg data-gwd-shape="line" preserveAspectRatio="none" viewBox="0 0 2 332" class="gwd-line-awnn">
-            <line x1="0.5" x2="1.5" y1="0.002" y2="331.998"></line>
-          </svg><span class="gwd-span-stnj">&nbsp; &nbsp; M.C.B</span><span class="gwd-span-nitg">&nbsp; &nbsp; &nbsp; &nbsp;STARTER</span>
-        </div>
-      </gwd-page>
-    </gwd-pagedeck>
-  </gwd-google-ad>
-  <script type="text/javascript" id="gwd-init-code">
-    (function() {
-      var gwdAd = document.getElementById('gwd-ad');
-
-      /**
-       * Handles the DOMContentLoaded event. The DOMContentLoaded event is
-       * fired when the document has been completely loaded and parsed.
-       */
-      function handleDomContentLoaded(event) {
-
-      }
-
-      /**
-       * Handles the WebComponentsReady event. This event is fired when all
-       * custom elements have been registered and upgraded.
-       */
-      function handleWebComponentsReady(event) {
-        // Start the Ad lifecycle.
-        setTimeout(function() {
-          gwdAd.initAd();
-        }, 0);
-      }
-
-      /**
-       * Handles the event that is dispatched after the Ad has been
-       * initialized and before the default page of the Ad is shown.
-       */
-      function handleAdInitialized(event) {}
-
-      window.addEventListener('DOMContentLoaded',
-        handleDomContentLoaded, false);
-      window.addEventListener('WebComponentsReady',
-        handleWebComponentsReady, false);
-      window.addEventListener('adinitialized',
-        handleAdInitialized, false);
-    })();
-  </script>
-  <div class="jtk-demo-main">
-    <!-- demo -->
+  <div class="jtk-demo-main" data-demo-id="animation" >
     <div class="jtk-demo-canvas canvas-wide animation-demo jtk-surface jtk-surface-nopan" id="canvas">
-      <div class="littledot" id="ld1"><br>
-        <br>
+      <div id="wrapper" style="position:absolute; top:10px;width:1000px;left:200px">
+        <div class="littledot" id="ld1"></br></br><a href="#" class="cmdLink detach" rel="ld1"><div style="color:blue;font-weight: bold;" id="rem1">B</div></a>
+        </div>
+        <div class="littledot" id="ld2"></br></br><a href="#" class="cmdLink detach" rel="ld2"><div style="color:blue;font-weight: bold;" id="rem2">R</div></a>
+        </div><!--
+        <div class="littledot" id="ld3"></br></br><a href="#" class="cmdLink detach" rel="ld3"></a>3
+        </div>-->
+        <div class="littledot" id="ld4"></br></br><a href="#" class="cmdLink detach" rel="ld4"><div style="color:blue;font-weight: bold;" id="rem4">C</div></a>
+        </div>
+        <div class="littledot" id="ld5"></br></br><a href="#" class="cmdLink detach" rel="ld5"><div style="color:blue;font-weight: bold;" id="rem5">D</div></a>
+        </div>
+        <div class="littledot" id="ld6"></br></br><a href="#" class="cmdLink detach" rel="ld6"><div style="color:blue;font-weight: bold;" id="rem6">E</div></a>
+        </div>
+        <div class="littledot" id="ld7"></br></br><a href="#" class="cmdLink detach" rel="ld7"><div style="color:blue;font-weight: bold;" id="rem7">G</div></a>
+        </div>
+		
+        <div class="littledot" id="ld8"></br></br><a href="#" class="cmdLink detach" rel="ld8"><div style="color:blue;font-weight: bold;" id="rem8">H</div></a>
+        </div>
+        <div class="littledot" id="ld9"></br></br><a href="#" class="cmdLink detach" rel="ld9"><div style="color:blue;font-weight: bold;" id="rem9">I</div></a>
+        </div>
+        <div class="littledot" id="ld10"></br></br><a href="#" class="cmdLink detach" rel="ld10"><div style="color:blue;font-weight: bold;" id="rem10">A3</div></a>
+        </div>
+        <div class="littledot" id="ld11"></br></br><a href="#" class="cmdLink detach" rel="ld11"><div style="color:blue;font-weight: bold;" id="rem11">A4</div></a>
+        </div>
+		
+        <div class="littledot" id="ld12"></br></br><a href="#" class="cmdLink detach" rel="ld12"><div style="color:blue;font-weight: bold;" id="rem12">A1</div></a>
+        </div>
+        <div class="littledot" id="ld13"></br></br><a href="#" class="cmdLink detach" rel="ld13"><div style="color:blue;font-weight: bold;" id="rem13">F1</div></a>
+        </div>
+        <div class="littledot" id="ld14"></br></br><a href="#" class="cmdLink detach" rel="ld14"><div style="color:blue;font-weight: bold;" id="rem14">A2</div></a>
+        </div>
+        <div class="littledot" id="ld15"></br></br><a href="#" class="cmdLink detach" rel="ld15"><div style="color:blue;font-weight: bold;" id="rem15">F2</div></a>
+        </div>
+		
+        <div class="littledot" id="ld16"></br></br><a href="#" class="cmdLink detach" rel="ld16"><div style="color:blue;font-weight: bold;" id="rem16">L</div></a>
+        </div>
+        <div class="littledot" id="ld17"></br></br><a href="#" class="cmdLink detach" rel="ld17"><div style="color:blue;font-weight: bold;" id="rem17">F</div></a>
+        </div>
+        <div class="littledot" id="ld18"></br></br><a href="#" class="cmdLink detach" rel="ld18"><div style="color:blue;font-weight: bold;" id="rem18">A</div></a>
+        </div>
+        <div class="littledot" id="ld19"></br></br><a href="#" class="cmdLink detach" rel="ld18"><div style="color:blue;font-weight: bold;" id="rem19">F3</div></a>
+        </div>
+        <div class="littledot" id="ld20"></br></br><a href="#" class="cmdLink detach" rel="ld18"><div style="color:blue;font-weight: bold;" id="rem20">F4</div></a>
+        </div>
 
-        <a style="color:grey" href="#" class="cmdLink detach" rel="ld1">-</a>
+		
+        <div class="row">
+          <div class="column30" >
+            <img id="myimage" class="mcbSwitch" src="mcb1.png" alt="MCB Switch" onclick="mcbonoff();" width="70" height="120">
+          </div>
+		 
+		  <div class="boxed" width="60" height="40" style="position: absolute;;left: 6em;top: 04em;">
+    <img src="push1.png" id="led_l" height="50px"  />
+    <img src="push1.png" id="led_f" height="50px"  />
+    <img src="push1.png" id="led_a" height="50px"  />
+</div>
+          <div class="column70" id="movers-row" >
+            
+            <img class="voltMeter" src="V Meter.png" alt="Voltmeter" width="170" height="170">
+			
+            <input id="volt_reader" type="text" size="13" style="position:absolute;" disabled>
+			<div style="position: absolute;top:-2.1em;left: 20.3em;">
+        <svg class="meter">
+          <polygon class="meter-clock" points="129,145 137,90 145,145"></polygon>
+          <circle class="meter-circle" r="10" cx="137" cy="145"></circle>
+        </svg>
       </div>
-      <a href="#"></a>
+      
+			<!--<img id="needle1" class="niddle1" src= niddle.png width="09" height="55">-->
+            <img class="amMeter" src="A meter.png" alt="Ammeter" width="170" height="170">
+			<!--<img id="needle" class="niddle" src= niddle.png width="09" height="55">-->
+			<div>
+          <svg class="meter" style="position: absolute;top:-2.1em;left: 37.8em;">
+            <polygon class="meter-clock2" points="129,145 137,90 145,145"></polygon>
+            <circle class="meter-circle" r="10" cx="137" cy="145"></circle>
+          </svg>
+          </div>
+			<input id="amme_reader" type="text" size="14" style="position:absolute;" disabled>
+			<!-- <div id="currentPointerValue1">
+			<input id="currentPointerValue" type="text" size="15" style="text-align:center; height:3.5em;  border:5px solid black"><br>
+			<b>&ensp;&ensp;&ensp;Speedometer</b>
+			</div> -->
+			<div style="position:absolute;left:56em;top:6em;">
+				<button id="check-button" >Check</button><br>
+				<style>
+				#check-button {
+
+    background-color: #27d447;
+    color: white;
+	}
+	#check-button:hover,#check-button:focus {
+    background-color: #3e8e41;
+}
+	</style>
+
+
+			</div>
+			<div style="position:absolute;left:56em;top:10em;">
+			<input id="reset" type="reset" onclick="window.location.href = 'index.html'" value="Reset" size="15">
+			<style>
+				#reset{
+            background-color: #27d447;
+          color: white;
+	}
+	#reset:hover,	#reset:focus {
+    background-color: #3e8e41;
+}
+
+		</style>
+</div>
+<div style="position:absolute;left:56em;top:14em;">
+	
+            <button id="btn_table" onclick="AddData()" >&nbsp;Add to Table&nbsp;</button>
+			<style>
+				#btn_table{
+
+    background-color: #27d447;
+    color: white;
+	  height:3.2em;
+	}
+		#btn_table:hover{
+    background-color: #3e8e41;
+}
+	</style>
+          </div>
+          </div>
+			
+
+			<!--
+          <div style="position:absolute;left:55.4em;top:15em;">
+            <button id="check-button" >Check</button>
+            <input id="reset" type="reset" onclick="window.location.href = 'home.html';" value="Reset">
+          </div>
+		  -->
+      </div>
+      <div class="row">
+        <div class="column30">
+          
+      <!--      <br/>
+            <br/>
+            <br/>
+          <div style="position: relative; left: 0;">
+          <img src="Autotransformerouter.png" class="autoTrasformerouter" />
+          <img src="Autotransformerinner.png" class="autoTransformerinner"/>
+          </div>-->
+          <img class="resistanceBox" src="rheostate.png" alt="Ammeter Rheostat" width="250" height="100" style="margin-left:10px;margin-top:80px;position:relative;opacity:1">
+		<div id="currentValue_fix" onclick="fun_error()">        
+		<input type="range" class="slider1" id="currentValue_fixed" id="range" value="0" min="0" max="8" disabled>
+		  </div>
+
+     <img src="images/line2.png" style="margin-left: 630px;width:113px;height:20px;margin-top: -140px;">
+      
+		  <!-- <img class="resistanceBox" src="rheostate.png" alt="Ammeter Rheostat" width="250" height="100" style="margin-left:10px; margin-top:30px; position:relative;opacity:1">
+		<div onclick="currentValue_below()">	
+		<input type="range" class="slider" id="currentValue" value="1" min="1" max="8">
+        </div>     -->
+		</div>
+        <div class="column301" >
+          <div  class="machine" style="position: relative; left:27em; top:3em; border-style:solid;margin-left: 0px;width: 10em;  ">
+              <img src="rotor part 1.png" class="rotate1" height="150px"  />
+              <img src="rotor part 2.png" class="rotate" id="cirmover2" height="50px" style="position: absolute;
+                top: 50px;
+                left: 50px;
+"	/>
+            </div>
+            <div style="margin-left: -100px;">
+            <div id="box1" class="boxed" style="position: relative; left: 8.5em ;top:-9.3em;width: 18em;height: 14.5em;border: solid;">
+            <div id ="box2"class="boxed" style="position: relative; left: 1em ;top:2.0em;width: 16em;height: 10.5em;">
+		   <img src="motor1.png" id="motor" style="position: absolute; left:1em; top:-.1em; length:9em;width:13em;border-style:solid;margin-left: 0px; "/>
+       </div>
+		   <!--this style is used for flipping a image-->
+		   <style>
+		   #motor{
+		     -moz-transform: scaleX(-1);
+        -o-transform: scaleX(-1);
+        -webkit-transform: scaleX(-1);
+        transform: scaleX(-1);
+        filter: FlipH;
+        -ms-filter: "FlipH";
+		   }
+		   </style>
+            </div>
+          </div>
+        </div>
+        <div class="column401"
+        <div id="table" style="background-color: #ecf0f5;position:absolute; top:37.29em;width:312px;height:300px;">
+		<div>
+		<table style="margin-left: 60px;">
+		<tr>
+		<td><b>OBSERVATION TABLE</b></td>
+		</tr>
+  </table>
+  
+	
+</div>
+<form>
+  <table id="mytable" width="280" border="1" style="text-align:center" >
+    <tr>
+      <th width="25">S.No.</th>
+      <th width="25">Voltage (V)</th>
+      <th width="25">Current (A)</th>
+    </tr>
+  </table>
+</form>
+
+</div> 
+
+
+</div>
+<div class="column501"
+<div id="graph" style=" position:absolute; top:37.29em;width:720px;height:300px;left:18.41em; ">
+  <div id="print1">
+    <button id="prints"onclick="myFunction()"> Print</button>
+    <button id="graphmake"onclick="makegraph()"> Graph</button>
+		<style>
+				#prints{
+            background-color:#27d447;
+            color: white;
+            cursor:pointer;
+	          height:2.6em;
+	          width:6em;
+            margin-left: 18px;
+            border: 2px solid black;
+	       }
+	#prints:hover{
+    background-color: #3e8e41;
+}
+
+#graphmake{
+         position: absolute;
+         cursor:pointer;
+         margin-top: -220px;
+         margin-left: -96px;
+         height:2.6em;
+         width:6em;
+         background-color: #27d447;
+         color: white;
+         border: 2px solid black;
+       }
+       
+       #graphmake:hover{
+         background-color: #3e8e41;
+       }
+
+		</style>
+		<style>
+	
+		
+		#print1{
+		position:absolute;
+		top:14.8em;
+		left:37em;
+		}
+		</style>
+		<script>
+function myFunction() {
+  window.print();
+}
+</script>
+</div>
+	
+		</div>  		 
+        </div>
+      </div>
     </div>
-    <div class="littledot" id="ld2"><br>
-      <br>
+  </div> 
+  
+</div> 
 
-      <a style="color:grey" href="#" class="cmdLink detach" rel="ld2">+</a>
-    </div>
-    <a href="#"></a>
-  </div>
-  <div class="littledot" id="ld3"><br>
-    <br>
+   <div id="myDiv" style="position:absolute;width:590px;height:270px;left:31.4em;top:38.5em;"></div>     
+ <p id="mcb" style="position:absolute;"> <b>MCB</b> </p>
+ <p id="start" style=" position:absolute;"> <b>Starter </b> </p>
+  <p id="volt" style=" position:absolute;"> <b>Voltmeter </b> </p>
+    <p id="amme" style=" position:absolute;"> <b>Ammeter </b> </p>
+	  <p id="field" style=" position:absolute;"> <b>Rheostat </b> </p>
+	    <!-- <p id="rest" style=" position:absolute;"> <b>Armature Resistance </b> </p> -->
+		 <p id="mot" style=" position:absolute;"> <b> Motor </b> </p>
+		  <p id="rot" style=" position:absolute;"> <b> Rotor </b> </p>
+<script src="jsplumb1.js"></script>
+<script src="demo1.js"></script>
+       
+		<!-- <div id="one" style="position:absolute"> <strong>+</strong></div>
+<div id="two" style="position:absolute"> <strong>-</strong></div>
+<div id="three" style="position:absolute"> <strong>L</strong></div>
+<div id="four" style="position:absolute"> <strong>F</strong></div>
+<div id="five" style="position:absolute"> <strong>A</strong></div>
+<div id="six" style="position:absolute"> <strong>+</strong></div>
+<div id="seven" style="position:absolute"> <strong>-</strong></div>
+<div id="eight" style="position:absolute"> <strong>+</strong></div>
+<div id="nine" style="position:absolute"> <strong>-</strong></div>
+<div id="ten" style="position:absolute"> <strong>+</strong></div>
+<div id="ten2" style="position:absolute"> <strong>-</strong></div>
+<div id="ten4" style="position:absolute"> <strong>+</strong></div>
+<div id="ten5" style="position:absolute"> <strong>-</strong></div>
+<div id="ten7" style="position:absolute"> <strong>A1</strong></div>
+<div id="ten8" style="position:absolute"> <strong>F1</strong></div>
+<div id="ten9" style="position:absolute"> <strong>A2</strong></div>
+<div id="ten1" style="position:absolute"> <strong>F2</strong></div> -->
 
-    <a style="color:grey" href="#" class="cmdLink detach" rel="ld3">L</a>
-  </div>
-  <a href="#"></a>
-  <div class="littledot" id="ld4"><br>
-    <br>
+	
+		<div class="dropdown" style="left:1095px;top:2.3em; position:absolute">
+<button onclick="dropdown();" class="dropbtn">Instructions</button>
+  <div id="myDropdown" class="dropdown-content">
+    
+			     
+           <b>STEP 1:</b> Make connections as per the instructions given below:<br>
+				
+           <table style="margin-left: 20px;font-size: 18px;">
+            <tr>
+                <td style="border:1px solid black;"><b>From</b></td>
+                <td style="border:1px solid black;">R</td>
+                <td style="border:1px solid black;">B</td>
+                <td style="border:1px solid black;">B</td>
+                <td style="border:1px solid black;">B</td>
+                <td style="border:1px solid black;">F</td>
+                <td style="border:1px solid black;">A</td>
+                <td style="border:1px solid black;">H</td>
+                <td style="border:1px solid black;">C</td>
+                <td style="border:1px solid black;">D</td>
+                <td style="border:1px solid black;">E</td>
+                <td style="border:1px solid black;">G</td>
+              
+            </tr>
+            <tr>
+                <td style="border:1px solid black;"><b>To</b></td>
+                <td style="border:1px solid black;">L</td>
+                <td style="border:1px solid black;">H</td>
+                <td style="border:1px solid black;">A2</td>
+                <td style="border:1px solid black;">F2</td>
+                <td style="border:1px solid black;">I</td>
+                <td style="border:1px solid black;">A1</td>
+                <td style="border:1px solid black;">F1</td>
+                <td style="border:1px solid black;">A3</td>
+                <td style="border:1px solid black;">A4</td>
+                <td style="border:1px solid black;">F3</td>
+                <td style="border:1px solid black;">F4</td>
+               
+            </tr>
+        </table><br>
 
-    <a style="color:grey" href="#" class="cmdLink detach" rel="ld4">A</a>
-  </div>
-  <a href="#"></a>
-  <div class="littledot" id="ld5"><br>
-    <br>
-
-    <a style="color:grey" href="#" class="cmdLink detach" rel="ld5">F</a>
-  </div>
-  <a href="#"></a>
-  <div class="littledot" id="ld6"><br>
-    <br>
-
-    <a style="color:grey" href="#" class="cmdLink detach" rel="ld6">1</a>
-  </div>
-  <a href="#"></a>
-  <div class="littledot" id="ld7"><br>
-    <br>
-
-    <a style="color:grey" href="#" class="cmdLink detach" rel="ld7">2</a>
-  </div>
-  <a href="#"></a>
-  <div class="littledot" id="ld8"><br>
-    <br>
-
-    <a style="color:grey" href="#" class="cmdLink detach" rel="ld8">1</a>
-  </div>
-  <a href="#"></a>
-  <div class="littledot" id="ld9"><br>
-    <br>
-
-    <a style="color:grey" href="#" class="cmdLink detach" rel="ld9">2</a>
-  </div>
-  <a href="#"></a>
-  <div class="littledot" id="ld10"><br>
-    <br>
-
-    <a style="color:grey" href="#" class="cmdLink detach" rel="ld10">1</a>
-  </div>
-  <a href="#"></a>
-  <div class="littledot" id="ld11"><br>
-    <br>
-
-    <a style="color:grey" href="#" class="cmdLink detach" rel="ld11">2</a>
-  </div>
-  <a href="#"></a>
-  <div class="littledot" id="ld12"><br>
-    <br>
-
-    <a style="color:grey" href="#" class="cmdLink detach" rel="ld12">A1</a>
-  </div>
-  <a href="#"></a>
-  <div class="littledot" id="ld13"><br>
-    <br>
-
-    <a style="color:grey" href="#" class="cmdLink detach" rel="ld13">F1</a>
-  </div>
-  <a href="#"></a>
-  <div class="littledot" id="ld14"><br>
-    <br>
-
-    <a style="color:grey" href="#" class="cmdLink detach" rel="ld14">A3</a>
-  </div>
-  <a href="#"></a>
-  <div class="littledot" id="ld15"><br>
-    <br>
-
-    <a style="color:grey" href="#" class="cmdLink detach" rel="ld15">F3</a>
-  </div>
-  <a href="#"></a>
-  <div class="littledot" id="ld16"><br>
-    <br>
-
-    <a style="color:grey" href="#" class="cmdLink detach" rel="ld16">A2</a>
-  </div>
-  <a href="#"></a>
-  <div class="littledot" id="ld17"><br>
-    <br>
-
-    <a style="color:grey" href="#" class="cmdLink detach" rel="ld17">F2</a>
-  </div>
-  <a href="#"></a>
-  <div class="littledot" id="ld18"><br>
-    <br>
-
-    <a style="color:grey" href="#" class="cmdLink detach" rel="ld18">A4</a>
-  </div>
-  <a href="#"></a>
-  <div class="littledot" id="ld19"><br>
-    <br>
-
-    <a style="color:grey" href="#" class="cmdLink detach" rel="ld19">F4</a>
-  </div>
-  <a href="#"></a>
-  <!-- /demo -->
-  <!-- explanation -->
-  <!-- /explanation -->
-  <div style="position:absolute;left:869px;top:51px;">
-    <button id="check-button" style="height:39px;width:135px; background-color:#27d447">Check</button>
-  </div>
-  <div style="position:absolute;left:870px;top:97px;">
-    <input id="reset" type="reset" value="Reset" style="height:39px;width:135px; background-color:#27d447 " onclick="window.location.href = 'main.html';">
-  </div>
-  <!-- JS -->
-  <script src="jsplumb1.js"></script>
-  <!-- /JS -->
-  <!--  demo code -->
-  <script src="demo1.js"></script>
-  <div style="position:absolute;left:869px;top:286px;">
-    <button class="createGraph" ;="" style="position: absolute;height:39px;width:135px; background-color:#27d447">Plot-Graph</button>
-  </div>
-  <div id="myDiv" style="width:1020px;height:500px;"></div>
-  <div style="position:absolute;top:41px; left:155px; width:60px; height:60px;">
-    <input style="position:absolute; top:41px;left:155px; width:60px; height:60px;" type="image" id="push1" src="assets/push1.png">
-  </div>
-  <div style="position:absolute;top:41px; left:116px; width:60px; height:60px;">
-    <input style="position:absolute; top:41px;left:116px; width:60px; height:60px;" type="image" id="push1_1" src="assets/push1.png">
-  </div>
-  <div style="position:absolute;top:41px; left:80px; width:60px; height:60px;">
-    <input style="position:absolute; top:41px;left:80px; width:60px; height:60px;" type="image" id="push1_2" src="assets/push1.png">
-  </div>
-  <!-- **************************************** -->
-  <div class="rang-title" style="position:absolute;left:487px;top:200px;">
-    <input style="height:24px;width:74px;  background-color: white ;" class="rang-number" id="show" type="text" value="0" disabled="disabled">
-  </div>
-  <div class="rang-title" style="position:absolute;left:724px;top:200px;">
-    <input style="height:24px;width:74px;  background-color: white ;" class="rang-number" id="show2" type="text" value="0" disabled="disabled">
-  </div>
-  <!-- table -->
-  <div style="position:absolute;left:770px;top:355px;font-size:16px;background-color: #faf0e6; font-weight: bold;width:213px; height:50px">
-    <h5 style="text-align: center;"><u>    Observation Table:   </u></h5>
-  </div>
-  <div style="position:absolute;left:145px;top:660px;">
-    <h2 style="text-align: center;"><big><u><i>    Graph:   </i></u></big></h2>
-  </div>
-  <div style="position:absolute;left:869px;top:242px;">
-    <button id="addToTable" style="height:39px;width:135px; background-color:#27d447" ;="" disabled="disabled">Add To Table</button>
-  </div>
+           <p><b>NOTE: If wire is wrongly connected, Click on node number to detach the wire.</b></p>
+					 
+					 <p><b>STEP 2:</b> Click on <button style="background-color:#27d447;" >&nbsp;Check&nbsp;</button> button for checking the connections.</p>
+					 <p><b>STEP 3:</b> Click on MCB to turn on the supply.</p>
+					 <p><b>STEP 4:</b> Now, move the slider on the rheostat to take observations from Voltmeter and Ammeter.</p>
+					 <p><b>STEP 5:</b> Click on <button style="background-color:#27d447;" >&nbsp;Add to Table&nbsp;</button> button to add values to the observation table.</p>
+					 <p><b>STEP 6:</b> Repeat steps 4 to 5 to add more values in table.</p>
+					 <p><b>STEP 7:</b> Click on <button style="background-color:#27d447;" >&nbsp;Graph&nbsp;</button> button to make a respective graph regarding the values in table.</p>
+           <p><b>STEP 8:</b> Click on <button style="background-color:#27d447;" >&nbsp;Print&nbsp;</button> button to print the webpage.</p>					
+           <p><b>STEP 9:</b> Click on <button style="background-color:#27d447;" >&nbsp;Reset&nbsp;</button> button to reset the webpage.</p>					
+			           
+</div>
+</div>
 
 
+ <footer>
+  <p>Copyright&copy; 2019 Virtual Labs, IIT Roorkee</p>
+ </footer>
 
 
+		<script>
+		
+		function dropdown() {
+    document.getElementById("myDropdown").classList.toggle("show");
+}
 
-  <div style="position:absolute;left:2px;top:665px;">
-    <input style="height:39px;width:135px;  background-color:#27d447" type="button" value="PRINT" onClick="window.print()">
-  </div>
-  <div style="position:absolute;left:780px;top:391px; ">
-    <table id="myTable" width="215" border="5">
-      <!-- <tbody><tr><td>&nbsp;S.N</td><td><big> &nbsp; VOLTAGE: &nbsp; </big></td><td> &nbsp; CURRENT: &nbsp; </td></tr><tr> -->
-      <tbody>
-        <tr>
-          <td></td>
-          <td></td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-  <script type="text/javascript">
-    'use strict';
-    var values = [115, 118, 120, 126, 129, 131, 133, 135, 138, 142];
-    var value = [0.16, 0.17, 0.18, 0.20, 0.21, 0.22, 0.23, 0.24, 0.28, 0.30];
-    var rangeMeter = document.querySelector('#range_1');
-    var rangeShow = document.querySelector("#show");
-    var rangeShow2 = document.querySelector("#show2");
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
 
-     // console.log(values[i]);
-    for (var i = 0; i < 100; i++) {
-      function rangeChange() {
-
-
-
-        // rangeShow.value = rotateClock;
-        if (rangeMeter.value < 100) {
-          rangeShow.value = values[9];
-          rangeShow2.value = value[9];
-          if (rangeMeter.value <= 90) {
-            rangeShow.value = values[8];
-            rangeShow2.value = value[8];
-            if (rangeMeter.value <= 80) {
-              rangeShow.value = values[7];
-              rangeShow2.value = value[7];
-              if (rangeMeter.value <= 70) {
-                rangeShow.value = values[6];
-                rangeShow2.value = value[6];
-                if (rangeMeter.value <= 60) {
-                  rangeShow.value = values[5];
-                  rangeShow2.value = value[5];
-                  if (rangeMeter.value <= 50) {
-                    rangeShow.value = values[4];
-                    rangeShow2.value = value[4];
-                    if (rangeMeter.value <= 40) {
-                      rangeShow.value = values[3];
-                      rangeShow2.value = value[3];
-                      if (rangeMeter.value <= 30) {
-                        rangeShow.value = values[2];
-                        rangeShow2.value = value[2];
-                        if (rangeMeter.value <= 20) {
-                          rangeShow.value = values[1];
-                          rangeShow2.value = value[1];
-                          if (rangeMeter.value <= 10) {
-                            rangeShow.value = values[0];
-                            rangeShow2.value = value[0];
-                          }
-                        }
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          }
-
-          // if(rangeMeter.value <= 10) {
-          //   rangeShow.value = values[0];
-          // }
-        }
-
-        // else if (10 < rangeMeter.value <= 20) {
-        //   rangeShow.value = values[1];
-        // }
-
-        // else if (20 < rangeMeter.value <= 30) {
-        //   rangeShow.value = values[2];
-        // }
-        // rangeShow.value = values[i];
-
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
       }
-      rangeMeter.addEventListener('input', rangeChange);
     }
-
-
-    var addToTable = document.querySelector('#addToTable');
-    var table = document.querySelector('table');
-    var count = 1;
-    var x = table.insertRow(-1);
-    var clickCounter = 0;
-    var cell1 = x.insertCell(0);
-    var cell2 = x.insertCell(1);
-    var cell3 = x.insertCell(2);
-    cell1.innerHTML = "S.N  ";
-    cell2.innerHTML = "Voltage  ";
-    cell3.innerHTML = "Current";
-    var trace1 = {
-      x: [],
-      y: [],
-      type: 'scatter'
-    };
-    var createGraph = document.querySelector('.createGraph')
-     addToTable.addEventListener('click', () => {
-      clickCounter++;
-
-      // var x = table.insertRow(0);
-
-
-      var y = table.insertRow(-1);
-      var z = table.insertRow(-1);
-
-      var cell1 = y.insertCell(0);
-      var cell2 = y.insertCell(1);
-      var cell3 = y.insertCell(2);
-
-
-      cell1.innerHTML = "&nbsp; S.N  ";
-      cell2.innerHTML = "Voltage  ";
-      cell3.innerHTML = "Current  ";
-
-      cell1.innerHTML = count++;
-      cell2.innerHTML = rangeShow.value;
-      cell3.innerHTML = rangeShow2.value;
-
-
-      trace1.x.push(cell2.innerHTML);
-      trace1.y.push(cell3.innerHTML);
-
-    })
-
-
-     createGraph.addEventListener('click', () => {
-      if (clickCounter < 6) {
-        alert("Atleast 6 readings are required!!")
-      } else {
-        var data = [trace1];
-        Plotly.newPlot('myDiv', data, {}, {
-          showSendToCloud: true
-        });
-      }
-
-    })
-  </script>
-  <style>
-    #range {
-      width: 100px;
-    }
-  </style>
+  }
+}
+		</script>
+		
+		<!--<p id="sgraph"> <b>Speed</b> </p>
+		<p id="vgraph"> <b> Voltage</b> </p>
+		<style type="text/css">
+		
+		#vgraph
+		{
+	top:54.8em;
+		left:50em;
+		position:absolute;
+		
+		}
+		
+		
+		#sgraph
+		{
+	top:45.8em;
+		left:31em;
+		position:absolute;
+		writing-mode: vertical-rl;
+        text-orientation: mixed;
+		}
+		
+		</style>
+-->
 </body>
-
 </html>
