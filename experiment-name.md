@@ -1,0 +1,1 @@
+## 	To Study Magnetisation Characteristics of DC Shunt Generator.

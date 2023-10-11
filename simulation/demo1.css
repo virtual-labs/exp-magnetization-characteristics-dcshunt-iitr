@@ -1,0 +1,281 @@
+ body {
+    background-color: linen;
+
+}
+  
+.demo {
+    /* for IE10+ touch devices */
+    touch-action:none;
+}
+/** JSPLUMB ARTEFACTS **/
+.jtk-overlay {
+    z-index: 51;
+}
+
+.jtk-endpoint {
+    z-index: 50;
+    cursor: move;
+}
+
+.jtk-connector {
+    z-index: 1;
+}
+.boxed{
+    border: 1px solid green;
+}
+/** ELEMENTS **/
+.littledot
+{
+    cursor: pointer;
+    width: 12px;
+    height: 12px;
+    background-image: url(littledot.png);
+    z-index: 5;
+    position: absolute;
+    border-radius: 31px;
+}
+
+
+
+.littledot-hover-hover {
+    border: 2px solid orange;
+}
+
+.dropHover {
+    border: 1px solid orange;
+}
+
+footer{
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.856);
+    width:1029.5px;
+    height:30px;
+    color: white;
+    margin-top: 910px;
+    margin-left: 185px;
+    text-align: center;
+    padding-top: 8px;
+}
+
+footer p{
+    position: relative;
+    margin-top: -6px;
+}
+
+
+/** ELEMENT POSITIONS **/
+#ld1 {
+    top: 9em;
+    left: 2.6em;
+}
+
+
+#mcb{
+	top: 12em;
+    left: 13.6em;
+}
+#ld2 {
+    top: 9em;
+    left: 0.6em;
+}
+
+#ld3 {
+    top: 9em;
+    left: 5em;
+}
+
+#start{
+    top: 12em;
+    left: 21.7em;
+}
+#ld4 {
+    top: 10.41em;
+    left: 25em;
+}
+
+#ld5 {
+    top: 10.41em;
+    left: 32em;
+}
+
+#ld6 {
+    top: 10.41em;
+    left: 42.5em;
+}
+
+#volt {
+    top: 12.8em;
+    left: 39em;
+}
+
+#ld7 {
+    top: 10.41em;
+    left: 49.3em;
+}
+
+#ld8 {
+    top: 29em;
+    left: 3.3em;
+}
+
+#amme {
+    top: 12.8em;
+    left: 56.7em;
+}
+
+#ld9 {
+    top: 25.6em;
+    left: 14em;
+}
+
+#ld10 {
+    top: 23.1em;
+    left: 46.8em;
+}
+
+#field {
+   top: 31.5em;
+   left: 19.3em;
+}
+
+#ld11 {
+    top: 31em;
+    left: 46.8em;
+}
+
+#ld12 {
+    top: 20.5em;
+    left: 22em;
+}
+
+#ld13 {
+    top: 20.41em;
+    left: 38em;
+}
+
+#ld14 {
+    top: 33.1em;
+    left: 22em;
+}
+#rest {
+    top: 34.5em;
+    left: 16.5em;
+}
+
+#mot {
+    top: 35.1em;
+    left: 41em;
+}
+#rot {
+    top: 33.1em;
+    left: 62.4em;
+}
+#ld15 {
+    top: 33.1em;
+    left: 38em;
+}
+
+#ld16 {
+    top: 9em;
+    left: 7em;
+}
+
+#ld17 {
+    top: 9em;
+    left: 10.5em;
+}
+
+#ld18 {
+    top: 9em;
+    left: 14em;
+}
+
+#ld19 {
+    top: 23.1em;
+    left: 54.9em;
+}
+
+#ld20 {
+    top: 31em;
+    left: 54.9em;
+}
+
+#rem1{
+    margin-top: -33px;
+}
+
+#rem2{
+    margin-top: -33px;
+}
+
+#rem4{
+    margin-top: -33px;
+}
+
+#rem5{
+    margin-top: -33px;
+}
+
+#rem6{
+    margin-top: -33px;
+}
+
+#rem7{
+    margin-top: -33px;
+}
+
+#rem8{
+    margin-top: -29px;
+}
+
+#rem9{
+    margin-top: -29px;
+}
+
+#rem10{
+    margin-top: -29px;
+}
+
+#rem11{
+    margin-top: -29px;
+}
+
+#rem12{
+    margin-top: -33px;
+}
+
+#rem13{
+    margin-top: -33px;
+}
+
+#rem14{
+    margin-top: -30px;
+}
+
+#rem15{
+    margin-top: -30px;
+}
+
+#rem16{
+    margin-top: -33px;
+}
+
+#rem17{
+    margin-top: -33px;
+}
+
+#rem18{
+    margin-top: -33px;
+}
+
+#rem19{
+    margin-top: -29px;
+}
+
+#rem20{
+    margin-top: -29px;
+}
+
+path, .jtk-endpoint {
+    cursor: pointer;
+}

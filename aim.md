@@ -1,0 +1,1 @@
+#### To study the magnetisation characteristics of DC Shunt Generator. Draw the graph between the armature voltage and field current.
