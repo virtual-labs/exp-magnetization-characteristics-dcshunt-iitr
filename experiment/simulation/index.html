@@ -1,637 +1,733 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
- "http://www.w3.org/TR/html4/strict.dtd">
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 <html>
+
 <head>
-<title>Virtual Labs | Magnetisation Characteristics of DC Shunt Generator </title>
-<meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-	
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-<link rel="stylesheet" href="style.css">
-<link rel="icon" type="image/x-icon" href="vlab logo.jpg">
-<script src="script.js"></script>
+  <title>Virtual Labs | Magnetisation Characteristics of DC Shunt Generator </title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-        <meta http-equiv="content-type" content="text/html;charset=utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no"/>
-        <!--<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">-->
-      <!--  <link href="//fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/x-icon" href="vlab logo.jpg">
+  <script src="script.js"></script>
+
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no" />
+  <!--<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">-->
+  <!--  <link href="//fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet">
 -->
-      
-        <link rel="stylesheet" href="demo1.css">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-*{
-padding:0px;
-margin:0px;
 
-}
-.column70 {
-  float: left;
-  width: 70%;
-  padding: 10px;
-  height: 300px;
-  border-style: solid;
-  
-}
-.column501 {
-  float: left;
-  width: 30%;
-  padding: 10px;
-  height: 300px;
-  border-style: solid; 
-  
-}
-* {
-  box-sizing: border-box;
-}
- #wrapper {
-  width:100%;
-}
+  <link rel="stylesheet" href="demo1.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    * {
+      padding: 0px;
+      margin: 0px;
 
-div
-{
-  resize: both;
-  /* overflow: ; */
-}
-#wrapper {
-  width:100%;
-}
-.column60 {
-  float: left;
-  width: 60%;
-  padding: 10px;
-  height: 300px;
-  border-style: solid;
-  
-}
+    }
 
-.column40 {
-  float: left;
-  width: 40%;
-  padding: 10px;
-  height: 300px;
-  border-style: solid;
-  border-left: none;
-  
-}
-.column401 {
-  float: left;
-  width: 30%;
-  padding: 10px;
-  height: 300px;
-  border-style: solid; 
-  
-}
-.column20 {
-  float: left;
-  width: 20%;
-  padding: 10px;
-  height: 300px;
-  border-style: solid; 
-}
-.column30 {
-  float: left;
-  width: 30%;
-  padding: 10px;
-  height: 300px;
-  border-style: solid; 
-}
-.column301 {
-  float: left;
-  width: 70%;
-  padding: 10px;
-  height: 300px;
-  border-style: solid; 
-  /* border-right: : none; */
-}
+    .column70 {
+      float: left;
+      width: 70%;
+      padding: 10px;
+      height: 300px;
+      border-style: solid;
 
+    }
 
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-.rotorOuter
-  {
-    position: relative;
-    top: 0;
-    left: 0;
-  }
-.rotorInner
-  {
-    position: absolute;
-    top: 60px;
-    left: 60px;
-  }
-.autoTrasformerouter
-  {
-    position: relative;
-    top: 0;
-    left: 0;
-  }
-.autoTransformerinner
-  {
-    position: absolute;
-    top: 12px;
-    left: 13px;
+    .column501 {
+      float: left;
+      width: 30%;
+      padding: 10px;
+      height: 300px;
+      border-style: solid;
 
-  }
-#check-button {
-padding:10px 27px;
-}
-#reset {
-padding:10px 30px;
-}
-img.autoTrasformerouter
-{
-  width:75%; 
-}
-img.autoTransformerinner
-{
-  width:60%; 
-}
+    }
 
-  .voltMeter {
-  position:absolute;
-  margin-left: 70px;
-  }
-  #volt_reader {
-  position:absolute;
-  top:7.5em;
-  left:24.7em;
-  text-align:center;
-  }
-  .niddle{
-  position:absolute;
-  top:60px;
-  left:551.5px;
-  }
-  .amMeter {
-  position:absolute;
-  margin-left: 110px;
-  }
-  .voltMeter {
-  position:relative;
-  }
-  #amme_reader {
-  position:absolute;
-  top:7.5em;
-  left:41.9em;
-  text-align:center;
-  }
-  .niddle1{
-  position:absolute;
-  top:60px;
-  left:378.2px;
-  }
-  .machine{
-  border-style:solid;
-  }
-  .rotate1 {
-  padding:15px;
-  }
-  .rotate
-  {
-    position: absolute;
-    top: 12px;
-    left: 13px;
-    animation: rotations 0s infinite linear;
+    * {
+      box-sizing: border-box;
+    }
 
-  }
-  @keyframes rotations {
-  from {
-    transform: rotate(10deg);
-  }
-  to {
-    transform: rotate(30deg);
-  }
-}
-#currentPointerValue1 {
-position:absolute;
-top:5em;
-left:43em;
-}
+    #wrapper {
+      width: 100%;
+    }
 
-.slider1 {
-  -webkit-appearance: none;
-  width: 16.3%;
-  height: 3px;
-  border-radius: 5px;
-  background: #d3d3d3;
-  outline: none;
-  opacity: 0.7;
-  -webkit-transition: .2s;
-  transition: opacity .2s;
-  top:26em;
-  left:3em;
-  position:absolute;
-  opacity:2;
-}
+    div {
+      resize: both;
+      /* overflow: ; */
+    }
 
-.slider1:hover {
-  opacity: 3;
-}
+    #wrapper {
+      width: 100%;
+    }
 
-.slider1::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  appearance: none;
-  width: 23px;
-  height: 24px;
-  border: 0;
-  background: url('Slider.png');
-  cursor: pointer;
-}
+    .column60 {
+      float: left;
+      width: 60%;
+      padding: 10px;
+      height: 300px;
+      border-style: solid;
 
-.slider1::-moz-range-thumb {
-  width: 23px;
-  height: 24px;
-  border: 0;
-  background: url('Slider.png');
-  cursor: pointer;
-}
+    }
+
+    .column40 {
+      float: left;
+      width: 40%;
+      padding: 10px;
+      height: 300px;
+      border-style: solid;
+      border-left: none;
+
+    }
+
+    .column401 {
+      float: left;
+      width: 30%;
+      padding: 10px;
+      height: 300px;
+      border-style: solid;
+
+    }
+
+    .column20 {
+      float: left;
+      width: 20%;
+      padding: 10px;
+      height: 300px;
+      border-style: solid;
+    }
+
+    .column30 {
+      float: left;
+      width: 30%;
+      padding: 10px;
+      height: 300px;
+      border-style: solid;
+    }
+
+    .column301 {
+      float: left;
+      width: 70%;
+      padding: 10px;
+      height: 300px;
+      border-style: solid;
+      /* border-right: : none; */
+    }
 
 
+    .row:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+
+    .rotorOuter {
+      position: relative;
+      top: 0;
+      left: 0;
+    }
+
+    .rotorInner {
+      position: absolute;
+      top: 60px;
+      left: 60px;
+    }
+
+    .autoTrasformerouter {
+      position: relative;
+      top: 0;
+      left: 0;
+    }
+
+    .autoTransformerinner {
+      position: absolute;
+      top: 12px;
+      left: 13px;
+
+    }
+
+    #check-button {
+      padding: 10px 27px;
+    }
+
+    #reset {
+      padding: 10px 30px;
+    }
+
+    img.autoTrasformerouter {
+      width: 75%;
+    }
+
+    img.autoTransformerinner {
+      width: 60%;
+    }
+
+    .voltMeter {
+      position: absolute;
+      margin-left: 70px;
+    }
+
+    #volt_reader {
+      position: absolute;
+      top: 7.5em;
+      left: 24.7em;
+      text-align: center;
+    }
+
+    .niddle {
+      position: absolute;
+      top: 60px;
+      left: 551.5px;
+    }
+
+    .amMeter {
+      position: absolute;
+      margin-left: 110px;
+    }
+
+    .voltMeter {
+      position: relative;
+    }
+
+    #amme_reader {
+      position: absolute;
+      top: 7.5em;
+      left: 41.9em;
+      text-align: center;
+    }
+
+    .niddle1 {
+      position: absolute;
+      top: 60px;
+      left: 378.2px;
+    }
+
+    .machine {
+      border-style: solid;
+    }
+
+    .rotate1 {
+      padding: 15px;
+    }
+
+    .rotate {
+      position: absolute;
+      top: 12px;
+      left: 13px;
+      animation: rotations 0s infinite linear;
+
+    }
+
+    @keyframes rotations {
+      from {
+        transform: rotate(10deg);
+      }
+
+      to {
+        transform: rotate(30deg);
+      }
+    }
+
+    #currentPointerValue1 {
+      position: absolute;
+      top: 5em;
+      left: 43em;
+    }
+
+    .slider1 {
+      -webkit-appearance: none;
+      width: 16.3%;
+      height: 3px;
+      border-radius: 5px;
+      background: #d3d3d3;
+      outline: none;
+      opacity: 0.7;
+      -webkit-transition: .2s;
+      transition: opacity .2s;
+      top: 26em;
+      left: 3em;
+      position: absolute;
+      opacity: 2;
+    }
+
+    .slider1:hover {
+      opacity: 3;
+    }
+
+    .slider1::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 23px;
+      height: 24px;
+      border: 0;
+      background: url('Slider.png');
+      cursor: grabbing;
+    }
+
+    .slider1::-moz-range-thumb {
+      width: 23px;
+      height: 24px;
+      border: 0;
+      background: url('Slider.png');
+      cursor: grabbing;
+    }
 
 
-.slider {
-  -webkit-appearance: none;
-  width: 16.3%;
-  height: 3px;
-  border-radius: 5px;
-  background: #d3d3d3;
-  outline: none;
-  opacity: 0.7;
-  -webkit-transition: .2s;
-  transition: opacity .2s;
-  top:29em;
-  left:3em;
-  position:absolute;
-  opacity:2;
-}
 
-.slider:hover {
-  opacity: 3;
-}
 
-.slider::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  appearance: none;
-  width: 23px;
-  height: 24px;
-  border: 0;
-  background: url('Slider.png');
-  cursor: pointer;
-}
+    .slider {
+      -webkit-appearance: none;
+      width: 16.3%;
+      height: 3px;
+      border-radius: 5px;
+      background: #d3d3d3;
+      outline: none;
+      opacity: 0.7;
+      -webkit-transition: .2s;
+      transition: opacity .2s;
+      top: 29em;
+      left: 3em;
+      position: absolute;
+      opacity: 2;
+    }
 
-.slider::-moz-range-thumb {
-  width: 23px;
-  height: 24px;
-  border: 0;
-  background: url('Slider.png');
-  cursor: pointer;
-}
+    .slider:hover {
+      opacity: 3;
+    }
 
- .dropbtn {
-    background-color: #27d447;
-    color: white;
-    padding: 10px 8px;
-    font-size: 16px;
-    border: 2px solid black;
-    cursor: pointer;
-}
+    .slider::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 23px;
+      height: 24px;
+      border: 0;
+      background: url('Slider.png');
+      cursor: pointer;
+    }
 
-/*.dropbtn:hover, .dropbtn:focus {
-    background-color: #3e8e41;
-} */
+    .slider::-moz-range-thumb {
+      width: 23px;
+      height: 24px;
+      border: 0;
+      background: url('Slider.png');
+      cursor: pointer;
+    }
 
-.dropdown {
-    position: relative;
-    display: inline-block;
-	  vertical-align: left;
-}
-
-.dropdown-content {
-    visibility: hidden;
-    width: 375px;
-    background:white;
-    color: black;
-    text-align: left;
-    padding: 5px 0;
-    border-radius: 6px;
-    font-size: 15px;
-    position: absolute;
-    z-index: 1;
-}
-
-.dropdown:hover .dropdown-content {
-    visibility: visible;
-    position: absolute;
-    margin-left: 122px;
-    margin-top: -47px;
-    padding-left: 5px;
-    z-index: 1;
+    .dropbtn {
+      background-color: #ed143d;
+      color: white;
+      padding: 10px 8px;
+      font-size: 16px;
+      border: 2px solid black;
+      cursor: pointer;
+      font-weight: 400;
+      border-radius: 8px;
+    }
     
-}
+    .dropdown {
+      position: relative;
+      display: inline-block;
+      vertical-align: left;
+    }
 
-.dropdown:hover {background-color: rgb(27, 75, 27)}
+    .dropdown-content {
+      visibility: hidden;
+      width: 375px;
+      background: white;
+      color: black;
+      text-align: justify;
+      padding: 5px 7px;
+      border-radius: 6px;
+      font-size: 15px;
+      position: absolute;
+      z-index: 1;
+      box-shadow: 5px 5px 30px;
+      border: 1px solid;
+    }
 
-.show {display:block;}
+    .dropdown:hover .dropdown-content {
+      visibility: visible;
+      /* position: absolute; */
+      /* margin-left: 122px;
+      margin-top: -47px;
+      padding-left: 5px; */
+      z-index: 1;
 
+    }
 
-</style>
-<script src="https://cdn.plot.ly/plotly-latest.min.js"></script></head>
+    .dropbtn:hover {
+      background-color: #bb2d3b;
+    }
+
+    .show {
+      display: block;
+    }
+  </style>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
 
 
 
 </head>
+
 <body onload="disab()">
 
-  <div class="jtk-demo-main" data-demo-id="animation" >
+  <div class="jtk-demo-main" data-demo-id="animation">
     <div class="jtk-demo-canvas canvas-wide animation-demo jtk-surface jtk-surface-nopan" id="canvas">
       <div id="wrapper" style="position:absolute; top:10px;width:1000px;left:200px">
-        <div class="littledot" id="ld1"></br></br><a href="#" class="cmdLink detach" rel="ld1"><div style="color:blue;font-weight: bold;" id="rem1">B</div></a>
+        <div class="littledot" id="ld1"></br></br><a href="#" class="cmdLink detach" rel="ld1">
+            <div style="color:blue;font-weight: bold;" id="rem1">B</div>
+          </a>
         </div>
-        <div class="littledot" id="ld2"></br></br><a href="#" class="cmdLink detach" rel="ld2"><div style="color:blue;font-weight: bold;" id="rem2">R</div></a>
+        <div class="littledot" id="ld2"></br></br><a href="#" class="cmdLink detach" rel="ld2">
+            <div style="color:blue;font-weight: bold;" id="rem2">R</div>
+          </a>
         </div><!--
         <div class="littledot" id="ld3"></br></br><a href="#" class="cmdLink detach" rel="ld3"></a>3
         </div>-->
-        <div class="littledot" id="ld4"></br></br><a href="#" class="cmdLink detach" rel="ld4"><div style="color:blue;font-weight: bold;" id="rem4">C</div></a>
+        <div class="littledot" id="ld4"></br></br><a href="#" class="cmdLink detach" rel="ld4">
+            <div style="color:blue;font-weight: bold;" id="rem4">C</div>
+          </a>
         </div>
-        <div class="littledot" id="ld5"></br></br><a href="#" class="cmdLink detach" rel="ld5"><div style="color:blue;font-weight: bold;" id="rem5">D</div></a>
+        <div class="littledot" id="ld5"></br></br><a href="#" class="cmdLink detach" rel="ld5">
+            <div style="color:blue;font-weight: bold;" id="rem5">D</div>
+          </a>
         </div>
-        <div class="littledot" id="ld6"></br></br><a href="#" class="cmdLink detach" rel="ld6"><div style="color:blue;font-weight: bold;" id="rem6">E</div></a>
+        <div class="littledot" id="ld6"></br></br><a href="#" class="cmdLink detach" rel="ld6">
+            <div style="color:blue;font-weight: bold;" id="rem6">E</div>
+          </a>
         </div>
-        <div class="littledot" id="ld7"></br></br><a href="#" class="cmdLink detach" rel="ld7"><div style="color:blue;font-weight: bold;" id="rem7">G</div></a>
-        </div>
-		
-        <div class="littledot" id="ld8"></br></br><a href="#" class="cmdLink detach" rel="ld8"><div style="color:blue;font-weight: bold;" id="rem8">H</div></a>
-        </div>
-        <div class="littledot" id="ld9"></br></br><a href="#" class="cmdLink detach" rel="ld9"><div style="color:blue;font-weight: bold;" id="rem9">I</div></a>
-        </div>
-        <div class="littledot" id="ld10"></br></br><a href="#" class="cmdLink detach" rel="ld10"><div style="color:blue;font-weight: bold;" id="rem10">A3</div></a>
-        </div>
-        <div class="littledot" id="ld11"></br></br><a href="#" class="cmdLink detach" rel="ld11"><div style="color:blue;font-weight: bold;" id="rem11">A4</div></a>
-        </div>
-		
-        <div class="littledot" id="ld12"></br></br><a href="#" class="cmdLink detach" rel="ld12"><div style="color:blue;font-weight: bold;" id="rem12">A1</div></a>
-        </div>
-        <div class="littledot" id="ld13"></br></br><a href="#" class="cmdLink detach" rel="ld13"><div style="color:blue;font-weight: bold;" id="rem13">F1</div></a>
-        </div>
-        <div class="littledot" id="ld14"></br></br><a href="#" class="cmdLink detach" rel="ld14"><div style="color:blue;font-weight: bold;" id="rem14">A2</div></a>
-        </div>
-        <div class="littledot" id="ld15"></br></br><a href="#" class="cmdLink detach" rel="ld15"><div style="color:blue;font-weight: bold;" id="rem15">F2</div></a>
-        </div>
-		
-        <div class="littledot" id="ld16"></br></br><a href="#" class="cmdLink detach" rel="ld16"><div style="color:blue;font-weight: bold;" id="rem16">L</div></a>
-        </div>
-        <div class="littledot" id="ld17"></br></br><a href="#" class="cmdLink detach" rel="ld17"><div style="color:blue;font-weight: bold;" id="rem17">F</div></a>
-        </div>
-        <div class="littledot" id="ld18"></br></br><a href="#" class="cmdLink detach" rel="ld18"><div style="color:blue;font-weight: bold;" id="rem18">A</div></a>
-        </div>
-        <div class="littledot" id="ld19"></br></br><a href="#" class="cmdLink detach" rel="ld18"><div style="color:blue;font-weight: bold;" id="rem19">F3</div></a>
-        </div>
-        <div class="littledot" id="ld20"></br></br><a href="#" class="cmdLink detach" rel="ld18"><div style="color:blue;font-weight: bold;" id="rem20">F4</div></a>
+        <div class="littledot" id="ld7"></br></br><a href="#" class="cmdLink detach" rel="ld7">
+            <div style="color:blue;font-weight: bold;" id="rem7">G</div>
+          </a>
         </div>
 
-		
+        <div class="littledot" id="ld8"></br></br><a href="#" class="cmdLink detach" rel="ld8">
+            <div style="color:blue;font-weight: bold;" id="rem8">H</div>
+          </a>
+        </div>
+        <div class="littledot" id="ld9"></br></br><a href="#" class="cmdLink detach" rel="ld9">
+            <div style="color:blue;font-weight: bold;" id="rem9">I</div>
+          </a>
+        </div>
+        <div class="littledot" id="ld10"></br></br><a href="#" class="cmdLink detach" rel="ld10">
+            <div style="color:blue;font-weight: bold;" id="rem10">A3</div>
+          </a>
+        </div>
+        <div class="littledot" id="ld11"></br></br><a href="#" class="cmdLink detach" rel="ld11">
+            <div style="color:blue;font-weight: bold;" id="rem11">A4</div>
+          </a>
+        </div>
+
+        <div class="littledot" id="ld12"></br></br><a href="#" class="cmdLink detach" rel="ld12">
+            <div style="color:blue;font-weight: bold;" id="rem12">A1</div>
+          </a>
+        </div>
+        <div class="littledot" id="ld13"></br></br><a href="#" class="cmdLink detach" rel="ld13">
+            <div style="color:blue;font-weight: bold;" id="rem13">F1</div>
+          </a>
+        </div>
+        <div class="littledot" id="ld14"></br></br><a href="#" class="cmdLink detach" rel="ld14">
+            <div style="color:blue;font-weight: bold;" id="rem14">A2</div>
+          </a>
+        </div>
+        <div class="littledot" id="ld15"></br></br><a href="#" class="cmdLink detach" rel="ld15">
+            <div style="color:blue;font-weight: bold;" id="rem15">F2</div>
+          </a>
+        </div>
+
+        <div class="littledot" id="ld16"></br></br><a href="#" class="cmdLink detach" rel="ld16">
+            <div style="color:blue;font-weight: bold;" id="rem16">L</div>
+          </a>
+        </div>
+        <div class="littledot" id="ld17"></br></br><a href="#" class="cmdLink detach" rel="ld17">
+            <div style="color:blue;font-weight: bold;" id="rem17">F</div>
+          </a>
+        </div>
+        <div class="littledot" id="ld18"></br></br><a href="#" class="cmdLink detach" rel="ld18">
+            <div style="color:blue;font-weight: bold;" id="rem18">A</div>
+          </a>
+        </div>
+        <div class="littledot" id="ld19"></br></br><a href="#" class="cmdLink detach" rel="ld19">
+            <div style="color:blue;font-weight: bold;" id="rem19">F3</div>
+          </a>
+        </div>
+        <div class="littledot" id="ld20"></br></br><a href="#" class="cmdLink detach" rel="ld20">
+            <div style="color:blue;font-weight: bold;" id="rem20">F4</div>
+          </a>
+        </div>
+
+
         <div class="row">
-          <div class="column30" >
-            <img id="myimage" class="mcbSwitch" src="mcb1.png" alt="MCB Switch" onclick="mcbonoff();" width="70" height="120">
+          <div class="column30">
+            <img id="myimage" class="mcbSwitch" src="mcb1.png" alt="MCB Switch" onclick="mcbonoff();" width="70"
+              height="120">
           </div>
-		 
-		  <div class="boxed" width="60" height="40" style="position: absolute;;left: 6em;top: 04em;">
-    <img src="push1.png" id="led_l" height="50px"  />
-    <img src="push1.png" id="led_f" height="50px"  />
-    <img src="push1.png" id="led_a" height="50px"  />
-</div>
-          <div class="column70" id="movers-row" >
-            
+
+          <div class="boxed" width="60" height="40" style="position: absolute;;left: 6em;top: 04em;">
+            <img src="push1.png" id="led_l" height="50px" />
+            <img src="push1.png" id="led_f" height="50px" />
+            <img src="push1.png" id="led_a" height="50px" />
+          </div>
+          <div class="column70" id="movers-row">
+
             <img class="voltMeter" src="V Meter.png" alt="Voltmeter" width="170" height="170">
-			
+
             <input id="volt_reader" type="text" size="13" style="position:absolute;" disabled>
-			<div style="position: absolute;top:-2.1em;left: 20.3em;">
-        <svg class="meter">
-          <polygon class="meter-clock" points="129,145 137,90 145,145"></polygon>
-          <circle class="meter-circle" r="10" cx="137" cy="145"></circle>
-        </svg>
-      </div>
-      
-			<!--<img id="needle1" class="niddle1" src= niddle.png width="09" height="55">-->
+            <div style="position: absolute;top:-2.1em;left: 20.3em;">
+              <svg class="meter">
+                <polygon class="meter-clock" points="129,145 137,90 145,145"></polygon>
+                <circle class="meter-circle" r="10" cx="137" cy="145"></circle>
+              </svg>
+            </div>
+
+            <!--<img id="needle1" class="niddle1" src= niddle.png width="09" height="55">-->
             <img class="amMeter" src="A meter.png" alt="Ammeter" width="170" height="170">
-			<!--<img id="needle" class="niddle" src= niddle.png width="09" height="55">-->
-			<div>
-          <svg class="meter" style="position: absolute;top:-2.1em;left: 37.8em;">
-            <polygon class="meter-clock2" points="129,145 137,90 145,145"></polygon>
-            <circle class="meter-circle" r="10" cx="137" cy="145"></circle>
-          </svg>
-          </div>
-			<input id="amme_reader" type="text" size="14" style="position:absolute;" disabled>
-			<!-- <div id="currentPointerValue1">
+            <!--<img id="needle" class="niddle" src= niddle.png width="09" height="55">-->
+            <div>
+              <svg class="meter" style="position: absolute;top:-2.1em;left: 37.8em;">
+                <polygon class="meter-clock2" points="129,145 137,90 145,145"></polygon>
+                <circle class="meter-circle" r="10" cx="137" cy="145"></circle>
+              </svg>
+            </div>
+            <input id="amme_reader" type="text" size="14" style="position:absolute;" disabled>
+            <!-- <div id="currentPointerValue1">
 			<input id="currentPointerValue" type="text" size="15" style="text-align:center; height:3.5em;  border:5px solid black"><br>
 			<b>&ensp;&ensp;&ensp;Speedometer</b>
 			</div> -->
-			<div style="position:absolute;left:56em;top:6em;">
-				<button id="check-button" >Check</button><br>
-				<style>
-				#check-button {
+            <div style="position:absolute;left:56em;top:6em;">
+              <button id="check-button">Check</button><br>
+              <style>
+                #check-button {
 
-    background-color: #27d447;
-    color: white;
-	}
-	#check-button:hover,#check-button:focus {
-    background-color: #3e8e41;
-}
-	</style>
+                  background-color: #198754;
+                  color: white;
+                  font-size: 16px;
+                  border: 2px solid black;
+                  font-weight: 400;
+                  border-radius: 8px;
+                }
+
+                #check-button:hover {
+                  background-color: #157347;
+                  box-shadow: inset 3px 3px 10px rgba(0, 0, 0, 0.125);
+
+                }
+              </style>
 
 
-			</div>
-			<div style="position:absolute;left:56em;top:10em;">
-			<input id="reset" type="reset" onclick="window.location.href = 'index.html'" value="Reset" size="15">
-			<style>
-				#reset{
-            background-color: #27d447;
-          color: white;
-	}
-	#reset:hover,	#reset:focus {
-    background-color: #3e8e41;
-}
+            </div>
+            <div style="position:absolute;left:56em;top:10em;">
+              <input id="reset" type="reset" onclick="window.location.href = 'index.html'" value="Reset" size="15">
+              <style>
+                #reset {
+                  background-color: #ffc107;
+                  color: black;
+                  border: 2px solid black;
+                  font-weight: 400;
+                  border-radius: 8px;
+                }
 
-		</style>
-</div>
-<div style="position:absolute;left:56em;top:14em;">
-	
-            <button id="btn_table" onclick="AddData()" >&nbsp;Add to Table&nbsp;</button>
-			<style>
-				#btn_table{
+                #reset:hover {
+                  background-color: #ffca2c;
+                  box-shadow: inset 3px 3px 10px rgba(125, 0, 125, 0.125);
+                }
+              </style>
+            </div>
+            <div style="position:absolute;left:56em;top:14em;">
 
-    background-color: #27d447;
-    color: white;
-	  height:3.2em;
-	}
-		#btn_table:hover{
-    background-color: #3e8e41;
-}
-	</style>
+              <button id="btn_table" onclick="AddData()">&nbsp;Add to Table&nbsp;</button>
+              <style>
+                #btn_table {
+
+                  background-color: #15b4cb;
+                  color: white;
+                  height: 3.0em;
+                  border: 2px solid black;
+                  font-weight: 400;
+                  border-radius: 8px;
+                }
+
+                #btn_table:hover {
+                  background-color: #31d2f2;
+                  box-shadow: inset 3px 3px 10px rgba(0, 0, 0, 0.125);
+
+                }
+              </style>
+            </div>
           </div>
-          </div>
-			
 
-			<!--
+
+          <!--
           <div style="position:absolute;left:55.4em;top:15em;">
             <button id="check-button" >Check</button>
             <input id="reset" type="reset" onclick="window.location.href = 'home.html';" value="Reset">
           </div>
 		  -->
-      </div>
-      <div class="row">
-        <div class="column30">
-          
-      <!--      <br/>
+        </div>
+        <div class="row">
+          <div class="column30">
+
+            <!--      <br/>
             <br/>
             <br/>
           <div style="position: relative; left: 0;">
           <img src="Autotransformerouter.png" class="autoTrasformerouter" />
           <img src="Autotransformerinner.png" class="autoTransformerinner"/>
           </div>-->
-          <img class="resistanceBox" src="rheostate.png" alt="Ammeter Rheostat" width="250" height="100" style="margin-left:10px;margin-top:80px;position:relative;opacity:1">
-		<div id="currentValue_fix" onclick="fun_error()">        
-		<input type="range" class="slider1" id="currentValue_fixed" id="range" value="0" min="0" max="8" disabled>
-		  </div>
+            <img class="resistanceBox" src="rheostate.png" alt="Ammeter Rheostat" width="250" height="100"
+              style="margin-left:10px;margin-top:80px;position:relative;opacity:1">
+            <div id="currentValue_fix" onclick="fun_error()">
+              <input type="range" class="slider1" id="currentValue_fixed" id="range" value="0" min="0" max="8" disabled>
+            </div>
 
-     <img src="images/line2.png" style="margin-left: 630px;width:113px;height:20px;margin-top: -140px;">
-      
-		  <!-- <img class="resistanceBox" src="rheostate.png" alt="Ammeter Rheostat" width="250" height="100" style="margin-left:10px; margin-top:30px; position:relative;opacity:1">
+            <img src="images/line2.png" style="margin-left: 630px;width:113px;height:20px;margin-top: -140px;">
+
+            <!-- <img class="resistanceBox" src="rheostate.png" alt="Ammeter Rheostat" width="250" height="100" style="margin-left:10px; margin-top:30px; position:relative;opacity:1">
 		<div onclick="currentValue_below()">	
 		<input type="range" class="slider" id="currentValue" value="1" min="1" max="8">
         </div>     -->
-		</div>
-        <div class="column301" >
-          <div  class="machine" style="position: relative; left:27em; top:3em; border-style:solid;margin-left: 0px;width: 10em;  ">
-              <img src="rotor part 1.png" class="rotate1" height="150px"  />
+          </div>
+          <div class="column301">
+            <div class="machine"
+              style="position: relative; left:27em; top:3em; border-style:solid;margin-left: 0px;width: 10em;  ">
+              <img src="rotor part 1.png" class="rotate1" height="150px" />
               <img src="rotor part 2.png" class="rotate" id="cirmover2" height="50px" style="position: absolute;
                 top: 50px;
                 left: 50px;
-"	/>
+" />
             </div>
             <div style="margin-left: -100px;">
-            <div id="box1" class="boxed" style="position: relative; left: 8.5em ;top:-9.3em;width: 18em;height: 14.5em;border: solid;">
-            <div id ="box2"class="boxed" style="position: relative; left: 1em ;top:2.0em;width: 16em;height: 10.5em;">
-		   <img src="motor1.png" id="motor" style="position: absolute; left:1em; top:-.1em; length:9em;width:13em;border-style:solid;margin-left: 0px; "/>
-       </div>
-		   <!--this style is used for flipping a image-->
-		   <style>
-		   #motor{
-		     -moz-transform: scaleX(-1);
-        -o-transform: scaleX(-1);
-        -webkit-transform: scaleX(-1);
-        transform: scaleX(-1);
-        filter: FlipH;
-        -ms-filter: "FlipH";
-		   }
-		   </style>
+              <div id="box1" class="boxed"
+                style="position: relative; left: 8.5em ;top:-9.3em;width: 18em;height: 14.5em;border: solid;">
+                <div id="box2" class="boxed"
+                  style="position: relative; left: 1em ;top:2.0em;width: 16em;height: 10.5em;">
+                  <img src="motor1.png" id="motor"
+                    style="position: absolute; left:1em; top:-.1em; length:9em;width:13em;border-style:solid;margin-left: 0px; " />
+                </div>
+                <!--this style is used for flipping a image-->
+                <style>
+                  #motor {
+                    -moz-transform: scaleX(-1);
+                    -o-transform: scaleX(-1);
+                    -webkit-transform: scaleX(-1);
+                    transform: scaleX(-1);
+                    filter: FlipH;
+                    -ms-filter: "FlipH";
+                  }
+                </style>
+              </div>
             </div>
           </div>
+          <div class="column401" <div id="table"
+            style="background-color: #ecf0f5;position:absolute; top:37.29em;width:312px;height:300px;">
+            <div>
+              <table style="margin-left: 60px;">
+                <tr>
+                  <td><b style="position: relative;
+      top: -6px;">OBSERVATION TABLE</b></td>
+                </tr>
+              </table>
+
+
+            </div>
+            <form>
+              <table id="mytable" width="280" border="1" style="text-align:center">
+                <tr>
+                  <th width="25">S.No.</th>
+                  <th width="25">Voltage (V)</th>
+                  <th width="25">Current (A)</th>
+                </tr>
+              </table>
+            </form>
+
+          </div>
+
+
         </div>
-        <div class="column401"
-        <div id="table" style="background-color: #ecf0f5;position:absolute; top:37.29em;width:312px;height:300px;">
-		<div>
-		<table style="margin-left: 60px;">
-		<tr>
-		<td><b>OBSERVATION TABLE</b></td>
-		</tr>
-  </table>
-  
-	
-</div>
-<form>
-  <table id="mytable" width="280" border="1" style="text-align:center" >
-    <tr>
-      <th width="25">S.No.</th>
-      <th width="25">Voltage (V)</th>
-      <th width="25">Current (A)</th>
-    </tr>
-  </table>
-</form>
+        <div class="column501" <div id="graph"
+          style=" position:absolute; top:37.29em;width:720px;height:300px;left:18.41em; ">
+          <div id="print1">
+            <button id="prints" onclick="myFunction()"> Print</button>
+            <button id="graphmake" onclick="makegraph()"> Graph</button>
+            <style>
+              #prints {
+                background-color: #27d447;
+                color: white;
+                cursor: pointer;
+                height: 2.6em;
+                width: 6em;
+                margin-left: 18px;
+                background-color: #0d6efd;
+                border: 2px solid black;
+                font-weight: 400;
+                border-radius: 8px;
+              }
 
-</div> 
+              #prints:hover {
+                background-color: #0b5ed7;
+                box-shadow: inset 3px 3px 10px rgba(0, 0, 125, 0.125);
+              }
 
+              #graphmake {
+                position: absolute;
+                cursor: pointer;
+                margin-top: -220px;
+                margin-left: -96px;
+                height: 2.6em;
+                width: 6em;
+                background-color: #27d447;
+                color: black;
+                border: 2px solid black;
+                font-weight: 400;
+                border-radius: 8px;
+              }
 
-</div>
-<div class="column501"
-<div id="graph" style=" position:absolute; top:37.29em;width:720px;height:300px;left:18.41em; ">
-  <div id="print1">
-    <button id="prints"onclick="myFunction()"> Print</button>
-    <button id="graphmake"onclick="makegraph()"> Graph</button>
-		<style>
-				#prints{
-            background-color:#27d447;
-            color: white;
-            cursor:pointer;
-	          height:2.6em;
-	          width:6em;
-            margin-left: 18px;
-            border: 2px solid black;
-	       }
-	#prints:hover{
-    background-color: #3e8e41;
-}
+              #graphmake:hover {
+                background-color: #3e8e41;
+                box-shadow: inset 3px 3px 10px rgba(125, 0, 125, 0.125);
 
-#graphmake{
-         position: absolute;
-         cursor:pointer;
-         margin-top: -220px;
-         margin-left: -96px;
-         height:2.6em;
-         width:6em;
-         background-color: #27d447;
-         color: white;
-         border: 2px solid black;
-       }
-       
-       #graphmake:hover{
-         background-color: #3e8e41;
-       }
+              }
+            </style>
+            <style>
+              #print1 {
+                position: absolute;
+                top: 14.8em;
+                left: 37em;
+              }
+            </style>
+            <script>
+              function myFunction() {
+                window.print();
+                
+              }
+            </script>
+          </div>
 
-		</style>
-		<style>
-	
-		
-		#print1{
-		position:absolute;
-		top:14.8em;
-		left:37em;
-		}
-		</style>
-		<script>
-function myFunction() {
-  window.print();
-}
-</script>
-</div>
-	
-		</div>  		 
         </div>
       </div>
     </div>
-  </div> 
-  
-</div> 
+  </div>
+  </div>
 
-   <div id="myDiv" style="position:absolute;width:590px;height:270px;left:31.4em;top:38.5em;"></div>     
- <p id="mcb" style="position:absolute;"> <b>MCB</b> </p>
- <p id="start" style=" position:absolute;"> <b>Starter </b> </p>
+  </div>
+
+  <div id="myDiv" style="position:absolute;width:590px;height:280px;left:31.4em;top:38.5em;"></div>
+  <p id="mcb" style="position:absolute;"> <b>MCB</b> </p>
+  <p id="start" style=" position:absolute;"> <b>Starter </b> </p>
   <p id="volt" style=" position:absolute;"> <b>Voltmeter </b> </p>
-    <p id="amme" style=" position:absolute;"> <b>Ammeter </b> </p>
-	  <p id="field" style=" position:absolute;"> <b>Rheostat </b> </p>
-	    <!-- <p id="rest" style=" position:absolute;"> <b>Armature Resistance </b> </p> -->
-		 <p id="mot" style=" position:absolute;"> <b> Motor </b> </p>
-		  <p id="rot" style=" position:absolute;"> <b> Rotor </b> </p>
-<script src="jsplumb1.js"></script>
-<script src="demo1.js"></script>
-       
-		<!-- <div id="one" style="position:absolute"> <strong>+</strong></div>
+  <p id="amme" style=" position:absolute;"> <b>Ammeter </b> </p>
+  <p id="field" style=" position:absolute;"> <b>Rheostat </b> </p>
+  <!-- <p id="rest" style=" position:absolute;"> <b>Armature Resistance </b> </p> -->
+  <p id="mot" style=" position:absolute;"> <b> Motor </b> </p>
+  <p id="rot" style=" position:absolute;"> <b> Rotor </b> </p>
+  <script src="jsplumb1.js"></script>
+  <script src="demo1.js"></script>
+
+  <!-- <div id="one" style="position:absolute"> <strong>+</strong></div>
 <div id="two" style="position:absolute"> <strong>-</strong></div>
 <div id="three" style="position:absolute"> <strong>L</strong></div>
 <div id="four" style="position:absolute"> <strong>F</strong></div>
@@ -649,90 +745,95 @@ function myFunction() {
 <div id="ten9" style="position:absolute"> <strong>A2</strong></div>
 <div id="ten1" style="position:absolute"> <strong>F2</strong></div> -->
 
-	
-		<div class="dropdown" style="left:1095px;top:2.3em; position:absolute">
-<button onclick="dropdown();" class="dropbtn">Instructions</button>
-  <div id="myDropdown" class="dropdown-content">
-    
-			     
-           <b>STEP 1:</b> Make connections as per the instructions given below:<br>
-				
-           <table style="margin-left: 20px;font-size: 18px;">
-            <tr>
-                <td style="border:1px solid black;"><b>From</b></td>
-                <td style="border:1px solid black;">R</td>
-                <td style="border:1px solid black;">B</td>
-                <td style="border:1px solid black;">B</td>
-                <td style="border:1px solid black;">B</td>
-                <td style="border:1px solid black;">F</td>
-                <td style="border:1px solid black;">A</td>
-                <td style="border:1px solid black;">H</td>
-                <td style="border:1px solid black;">C</td>
-                <td style="border:1px solid black;">D</td>
-                <td style="border:1px solid black;">E</td>
-                <td style="border:1px solid black;">G</td>
-              
-            </tr>
-            <tr>
-                <td style="border:1px solid black;"><b>To</b></td>
-                <td style="border:1px solid black;">L</td>
-                <td style="border:1px solid black;">H</td>
-                <td style="border:1px solid black;">A2</td>
-                <td style="border:1px solid black;">F2</td>
-                <td style="border:1px solid black;">I</td>
-                <td style="border:1px solid black;">A1</td>
-                <td style="border:1px solid black;">F1</td>
-                <td style="border:1px solid black;">A3</td>
-                <td style="border:1px solid black;">A4</td>
-                <td style="border:1px solid black;">F3</td>
-                <td style="border:1px solid black;">F4</td>
-               
-            </tr>
-        </table><br>
 
-           <p><b>NOTE: If wire is wrongly connected, Click on node number to detach the wire.</b></p>
-					 
-					 <p><b>STEP 2:</b> Click on <button style="background-color:#27d447;" >&nbsp;Check&nbsp;</button> button for checking the connections.</p>
-					 <p><b>STEP 3:</b> Click on MCB to turn on the supply.</p>
-					 <p><b>STEP 4:</b> Now, move the slider on the rheostat to take observations from Voltmeter and Ammeter.</p>
-					 <p><b>STEP 5:</b> Click on <button style="background-color:#27d447;" >&nbsp;Add to Table&nbsp;</button> button to add values to the observation table.</p>
-					 <p><b>STEP 6:</b> Repeat steps 4 to 5 to add more values in table.</p>
-					 <p><b>STEP 7:</b> Click on <button style="background-color:#27d447;" >&nbsp;Graph&nbsp;</button> button to make a respective graph regarding the values in table.</p>
-           <p><b>STEP 8:</b> Click on <button style="background-color:#27d447;" >&nbsp;Print&nbsp;</button> button to print the webpage.</p>					
-           <p><b>STEP 9:</b> Click on <button style="background-color:#27d447;" >&nbsp;Reset&nbsp;</button> button to reset the webpage.</p>					
-			           
-</div>
-</div>
+  <div class="dropdown" style="left:1095px;top:2.3em; position:absolute">
+    <button onclick="dropdown();" class="dropbtn">Instructions</button>
+    <div id="myDropdown" class="dropdown-content">
 
 
- <footer>
-  <p>Copyright&copy; 2019 Virtual Labs, IIT Roorkee</p>
- </footer>
+      <b>STEP 1:</b> Make connections as per the instructions given below:<br>
+
+      <table style="margin-left: 20px;font-size: 18px;text-align: center;width: 330px;">
+        <tr>
+          <td style="border:1px solid black;"><b>From</b></td>
+          <td style="border:1px solid black;">R</td>
+          <td style="border:1px solid black;">B</td>
+          <td style="border:1px solid black;">B</td>
+          <td style="border:1px solid black;">B</td>
+          <td style="border:1px solid black;">F</td>
+          <td style="border:1px solid black;">A</td>
+          <td style="border:1px solid black;">H</td>
+          <td style="border:1px solid black;">C</td>
+          <td style="border:1px solid black;">D</td>
+          <td style="border:1px solid black;">E</td>
+          <td style="border:1px solid black;">G</td>
+
+        </tr>
+        <tr>
+          <td style="border:1px solid black;"><b>To</b></td>
+          <td style="border:1px solid black;">L</td>
+          <td style="border:1px solid black;">H</td>
+          <td style="border:1px solid black;">A2</td>
+          <td style="border:1px solid black;">F2</td>
+          <td style="border:1px solid black;">I</td>
+          <td style="border:1px solid black;">A1</td>
+          <td style="border:1px solid black;">F1</td>
+          <td style="border:1px solid black;">A3</td>
+          <td style="border:1px solid black;">A4</td>
+          <td style="border:1px solid black;">F3</td>
+          <td style="border:1px solid black;">F4</td>
+
+        </tr>
+      </table><br>
+
+      <p><b>NOTE: If wire is wrongly connected, Click on node number to detach the wire.</b></p>
+
+      <p><b>STEP 2:</b> Click on <button style="background-color:#27d447;">&nbsp;Check&nbsp;</button> button for
+        checking the connections.</p>
+      <p><b>STEP 3:</b> Click on MCB to turn on the supply.</p>
+      <p><b>STEP 4:</b> Now, move the slider on the rheostat to take observations from Voltmeter and Ammeter.</p>
+      <p><b>STEP 5:</b> Click on <button style="background-color:#27d447;">&nbsp;Add to Table&nbsp;</button> button to
+        add values to the observation table.</p>
+      <p><b>STEP 6:</b> Repeat steps 4 to 5 to add more values in the table.</p>
+      <p><b>STEP 7:</b> Click on <button style="background-color:#27d447;">&nbsp;Graph&nbsp;</button> button to make a
+        respective graph regarding the values in the table.</p>
+      <p><b>STEP 8:</b> Click on <button style="background-color:#27d447;">&nbsp;Print&nbsp;</button> button to print
+        the webpage.</p>
+      <p><b>STEP 9:</b> Click on <button style="background-color:#27d447;">&nbsp;Reset&nbsp;</button> button to reset
+        the webpage.</p>
+
+    </div>
+  </div>
 
 
-		<script>
-		
-		function dropdown() {
-    document.getElementById("myDropdown").classList.toggle("show");
-}
+  <footer>
+    <p>Copyright &copy; 2019 Virtual Labs, IIT Roorkee</p>
+  </footer>
 
-// Close the dropdown if the user clicks outside of it
-window.onclick = function(event) {
-  if (!event.target.matches('.dropbtn')) {
 
-    var dropdowns = document.getElementsByClassName("dropdown-content");
-    var i;
-    for (i = 0; i < dropdowns.length; i++) {
-      var openDropdown = dropdowns[i];
-      if (openDropdown.classList.contains('show')) {
-        openDropdown.classList.remove('show');
+  <script>
+
+    function dropdown() {
+      document.getElementById("myDropdown").classList.toggle("show");
+    }
+
+    // Close the dropdown if the user clicks outside of it
+    window.onclick = function (event) {
+      if (!event.target.matches('.dropbtn')) {
+
+        var dropdowns = document.getElementsByClassName("dropdown-content");
+        var i;
+        for (i = 0; i < dropdowns.length; i++) {
+          var openDropdown = dropdowns[i];
+          if (openDropdown.classList.contains('show')) {
+            openDropdown.classList.remove('show');
+          }
+        }
       }
     }
-  }
-}
-		</script>
-		
-		<!--<p id="sgraph"> <b>Speed</b> </p>
+  </script>
+
+  <!--<p id="sgraph"> <b>Speed</b> </p>
 		<p id="vgraph"> <b> Voltage</b> </p>
 		<style type="text/css">
 		
@@ -757,4 +858,5 @@ window.onclick = function(event) {
 		</style>
 -->
 </body>
+
 </html>

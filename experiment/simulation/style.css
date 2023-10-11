@@ -8,7 +8,7 @@
 div
 {
   resize: both;
-  overflow: ;
+  
 }
 #wrapper {
   width:100%;
@@ -127,9 +127,7 @@ div
 
     .container{
     width: 20%;
-   
-   
-    
-   
-    
+  
   }
+
+  @media print{@page {size: landscape}}
