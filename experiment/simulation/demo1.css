@@ -47,14 +47,19 @@
 
 footer{
     position: absolute;
-    background-color: grey;
+    background-color: rgba(0, 0, 0, 0.856);
     width:1029.5px;
-    height:40px;
+    height:30px;
     color: white;
     margin-top: 910px;
     margin-left: 185px;
     text-align: center;
     padding-top: 8px;
+}
+
+footer p{
+    position: relative;
+    margin-top: -6px;
 }
 
 
